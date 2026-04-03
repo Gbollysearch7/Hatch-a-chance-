@@ -11,19 +11,9 @@ export function generateCouponCode(): string {
   return `HATCH-${randomAlphanumeric(6)}`
 }
 
-export interface WooCouponPayload {
-  code: string
-  discount_type: 'percent' | 'fixed_cart'
-  amount: string
-  individual_use: boolean
-  usage_limit: number
-  usage_limit_per_user: number
-  date_expires: string
-  description: string
-  free_shipping: boolean
-  minimum_amount?: string
-}
-
+// Creates a WooCommerce coupon via the existing TradersYard edge function.
+// The WooCommerce API keys are stored as secrets inside that edge function —
+// they never need to be in this app's environment.
 export async function createWooCoupon(
   prize: Prize,
   email: string,
@@ -32,43 +22,51 @@ export async function createWooCoupon(
 ): Promise<{ id: number; code: string }> {
   const config = useRuntimeConfig()
 
-  if (!config.wcApiUrl || !config.wcConsumerKey) {
-    // Dev/test mode — return mock coupon
-    console.warn('[WooCommerce] No credentials configured — returning mock coupon')
+  const supabaseUrl = config.supabaseUrl || 'https://qbbqlnldleqobkymeudk.supabase.co'
+  const supabaseKey = config.supabaseServiceRoleKey
+
+  if (!supabaseKey) {
+    console.warn('[WooCommerce] No Supabase service role key — returning mock coupon')
     return { id: 0, code }
   }
 
-  const payload: WooCouponPayload = {
+  const expiresAt = new Date(Date.now() + 24 * 60 * 60 * 1000).toISOString().slice(0, 19)
+
+  const body: Record<string, any> = {
+    action: 'create_coupon',
     code,
     discount_type: prize.discount_type,
     amount: prize.discount_value.toString(),
-    individual_use: true,
     usage_limit: 1,
     usage_limit_per_user: 1,
-    date_expires: new Date(Date.now() + 24 * 60 * 60 * 1000).toISOString().slice(0, 19),
-    description: `Easter Hatch 2026 — ${prize.woo_description_suffix} — ${email} — ${segment}`,
+    individual_use: true,
+    date_expires: expiresAt,
+    description: `Hatch a Chance 2026 — ${prize.woo_description_suffix} — ${email} — ${segment}`,
     free_shipping: false,
   }
 
   if (prize.minimum_order) {
-    payload.minimum_amount = prize.minimum_order.toString()
+    body.minimum_amount = prize.minimum_order.toString()
   }
 
-  const encoded = btoa(`${config.wcConsumerKey}:${config.wcConsumerSecret}`)
-  const res = await fetch(`${config.wcApiUrl}/coupons`, {
+  const res = await fetch(`${supabaseUrl}/functions/v1/woo-coupon-manager`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
-      Authorization: `Basic ${encoded}`,
+      'Authorization': `Bearer ${supabaseKey}`,
     },
-    body: JSON.stringify(payload),
+    body: JSON.stringify(body),
   })
 
   if (!res.ok) {
     const err = await res.text()
-    throw new Error(`WooCommerce coupon creation failed: ${err}`)
+    throw new Error(`Coupon creation failed: ${err}`)
   }
 
   const data = await res.json()
-  return { id: data.id, code: data.code }
+  if (!data.success) {
+    throw new Error(`Coupon creation failed: ${JSON.stringify(data)}`)
+  }
+
+  return { id: data.coupon.id, code: data.coupon.code.toUpperCase() }
 }
