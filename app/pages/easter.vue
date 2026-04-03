@@ -259,11 +259,14 @@
                   </a>
 
                   <!-- Share row -->
-                  <div class="flex gap-3 pt-1">
-                    <button @click="shareTwitter" class="flex-1 flex items-center justify-center gap-2 bg-neutral-100 dark:bg-neutral-800 hover:bg-neutral-200 dark:hover:bg-neutral-700 border border-neutral-200 dark:border-neutral-700 rounded-xl py-2.5 text-sm font-medium text-neutral-700 dark:text-neutral-300 transition-colors">
-                      <IconBrandX class="w-4 h-4" /> Share
+                  <div class="flex gap-2 pt-1">
+                    <button @click="shareWhatsApp" class="flex-1 flex items-center justify-center gap-1.5 bg-[#25D366]/10 hover:bg-[#25D366]/20 border border-[#25D366]/30 rounded-xl py-2.5 text-sm font-medium text-[#25D366] transition-colors">
+                      <IconBrandWhatsapp class="w-4 h-4" /> WhatsApp
                     </button>
-                    <button @click="copyDiscord" class="flex-1 flex items-center justify-center gap-2 bg-neutral-100 dark:bg-neutral-800 hover:bg-neutral-200 dark:hover:bg-neutral-700 border border-neutral-200 dark:border-neutral-700 rounded-xl py-2.5 text-sm font-medium text-neutral-700 dark:text-neutral-300 transition-colors">
+                    <button @click="shareTwitter" class="flex-1 flex items-center justify-center gap-1.5 bg-neutral-100 dark:bg-neutral-800 hover:bg-neutral-200 dark:hover:bg-neutral-700 border border-neutral-200 dark:border-neutral-700 rounded-xl py-2.5 text-sm font-medium text-neutral-700 dark:text-neutral-300 transition-colors">
+                      <IconBrandX class="w-4 h-4" /> Twitter
+                    </button>
+                    <button @click="copyDiscord" class="flex-1 flex items-center justify-center gap-1.5 bg-[#5865F2]/10 hover:bg-[#5865F2]/20 border border-[#5865F2]/30 rounded-xl py-2.5 text-sm font-medium text-[#5865F2] transition-colors">
                       <IconBrandDiscord class="w-4 h-4" />
                       <span v-if="discordCopied">Copied!</span>
                       <span v-else>Discord</span>
@@ -849,8 +852,14 @@ async function copyCode() {
 
 function shareTwitter() {
   if (!prize.value) return
-  const t = `Just cracked my Easter egg at @TradersYard and won: ${prize.value.display_text} 🥚 Code: ${prize.value.code} — grab yours while it lasts! tradersyard.com/easter`
+  const t = `Just cracked my Easter egg at @TradersYard and won: ${prize.value.display_text} 🥚 Everyone wins something — grab yours while it lasts! tradersyard.com/easter`
   window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(t)}`, '_blank')
+}
+
+function shareWhatsApp() {
+  if (!prize.value) return
+  const t = `I just cracked my Easter egg at TradersYard and won a prize 🥚 Everyone wins something — try yours here: tradersyard.com/easter`
+  window.open(`https://wa.me/?text=${encodeURIComponent(t)}`, '_blank')
 }
 
 async function copyDiscord() {
