@@ -39,10 +39,13 @@ body{margin:0;padding:0;font-family:'Inter',-apple-system,sans-serif;background:
     <div style="width:60px;height:1px;background:linear-gradient(90deg,transparent,#D4AF37,transparent);margin:20px auto;"></div>
     <p style="font-size:14px;color:#71717a;line-height:1.6;">Here's what you won:</p>
   </div>
+  <!-- Bunny/egg image -->
+  <div class="mob-pad" style="padding:0 48px 8px;text-align:center;">
+    <img src="https://iili.io/fyq9H0X.png" alt="🐣" width="80" height="80" style="display:inline-block;border:0;border-radius:50%;background:rgba(212,175,55,0.1);padding:12px;">
+  </div>
   <!-- Prize card -->
   <div class="mob-pad" style="padding:0 48px 24px;">
     <div style="border:1px solid rgba(212,175,55,0.35);border-radius:12px;padding:32px 28px;text-align:center;background:linear-gradient(180deg,rgba(212,175,55,0.08) 0%,transparent 100%);">
-      <div style="font-size:10px;font-weight:600;color:#D4AF37;text-transform:uppercase;letter-spacing:2px;margin-bottom:10px;">${prize.tier_label}</div>
       <h2 style="font-family:'Cormorant Garamond',Georgia,serif;font-size:28px;font-weight:600;color:#fff;line-height:1.25;margin-bottom:24px;">${prize.display_text}</h2>
       <div style="font-size:11px;font-weight:600;color:#71717a;text-transform:uppercase;letter-spacing:2px;margin-bottom:10px;">Your Code</div>
       <div style="display:inline-block;border:1px solid rgba(212,175,55,0.5);border-radius:6px;padding:12px 32px;background:rgba(212,175,55,0.06);">
