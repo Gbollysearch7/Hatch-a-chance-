@@ -2,7 +2,8 @@ import { PRIZE_POOLS, type Segment, type Prize } from '../data/prizes'
 import { getActivePrizeIds } from './db'
 
 // Weighted random draw — server-side only, never exposed to client
-export async function drawPrize(segment: Segment): Promise<Prize | null> {
+// For active segment: filters by targets_last_purchase if lastPurchaseValue is provided
+export async function drawPrize(segment: Segment, lastPurchaseValue?: number): Promise<Prize | null> {
   const pool = PRIZE_POOLS[segment]
   if (!pool || pool.length === 0) return null
 
@@ -10,7 +11,22 @@ export async function drawPrize(segment: Segment): Promise<Prize | null> {
   const activeIds = await getActivePrizeIds(segment)
 
   // Filter pool to only active prizes
-  const available = pool.filter(p => activeIds.has(p.id))
+  let available = pool.filter(p => activeIds.has(p.id))
+
+  // For active segment: filter by targets_last_purchase
+  // A prize is eligible if:
+  //   - targets_last_purchase is undefined (applies to everyone in this segment)
+  //   - OR targets_last_purchase includes the user's lastPurchaseValue
+  if (segment === 'active' && lastPurchaseValue !== undefined) {
+    available = available.filter(p =>
+      p.targets_last_purchase === undefined ||
+      p.targets_last_purchase.includes(lastPurchaseValue)
+    )
+  } else if (segment === 'active') {
+    // No lastPurchaseValue known — only include prizes without targeting
+    available = available.filter(p => p.targets_last_purchase === undefined)
+  }
+
   if (available.length === 0) return null
 
   // Recalculate weights proportionally for remaining active prizes
@@ -29,7 +45,7 @@ export async function drawPrize(segment: Segment): Promise<Prize | null> {
   return available[available.length - 1]
 }
 
-// Determine segment from WooCommerce order history
+// Determine segment from WooCommerce order history via Supabase edge function
 // Returns segment + last purchased challenge size for active segment upsell
 export async function getSegment(email: string): Promise<{
   segment: Segment
@@ -37,22 +53,29 @@ export async function getSegment(email: string): Promise<{
 }> {
   const config = useRuntimeConfig()
 
-  if (!config.wcApiUrl || !config.wcConsumerKey) {
-    // No WooCommerce configured — default to cold
+  const supabaseUrl = config.supabaseUrl || 'https://qbbqlnldleqobkymeudk.supabase.co'
+  const supabaseKey = config.supabaseServiceRoleKey as string | undefined
+
+  if (!supabaseKey) {
+    // No Supabase key — default to cold (dev mode)
     return { segment: 'cold' }
   }
 
   try {
-    const encoded = btoa(`${config.wcConsumerKey}:${config.wcConsumerSecret}`)
-    const url = `${config.wcApiUrl}/orders?email=${encodeURIComponent(email)}&per_page=10&orderby=date&order=desc&status=completed`
-
-    const res = await fetch(url, {
-      headers: { Authorization: `Basic ${encoded}` },
+    const res = await fetch(`${supabaseUrl}/functions/v1/get-woocommerce-data`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${supabaseKey}`,
+      },
+      body: JSON.stringify({ action: 'get_customer_orders', email }),
     })
 
     if (!res.ok) return { segment: 'cold' }
 
-    const orders: any[] = await res.json()
+    const data = await res.json()
+    const orders: any[] = data.orders ?? []
+
     if (!orders || orders.length === 0) return { segment: 'cold' }
 
     const lastOrder = orders[0]
@@ -61,8 +84,7 @@ export async function getSegment(email: string): Promise<{
 
     if (daysSince > 60) return { segment: 'churned' }
 
-    // Active: try to extract last challenge account size from order
-    // Look for a line item with meta matching a challenge value
+    // Active: try to extract last challenge account size from order line items
     const CHALLENGE_VALUES = [5000, 10000, 25000, 50000, 100000, 150000, 200000]
     let lastPurchaseValue: number | undefined
 

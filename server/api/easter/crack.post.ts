@@ -92,10 +92,10 @@ export default defineEventHandler(async (event) => {
   }
 
   // Determine segment server-side
-  const { segment } = await getSegment(emailNormalized)
+  const { segment, lastPurchaseValue } = await getSegment(emailNormalized)
 
-  // Draw prize (weighted random, inventory-aware)
-  const prize = await drawPrize(segment)
+  // Draw prize (weighted random, inventory-aware, tier-targeted for active users)
+  const prize = await drawPrize(segment, lastPurchaseValue)
   if (!prize) {
     throw createError({
       statusCode: 503,

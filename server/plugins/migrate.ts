@@ -84,27 +84,30 @@ export default defineNitroPlugin(async () => {
     // Seed prize inventory (safe — ON CONFLICT DO NOTHING)
     await db.unsafe(`
       INSERT INTO prize_inventory (prize_id, prize_name, segment, total_inventory, remaining_inventory, active) VALUES
-        ('cold-30pct',          '30% Off All Accounts',              'cold',    NULL, NULL, true),
-        ('cold-35pct',          '35% Off All Accounts',              'cold',    NULL, NULL, true),
-        ('cold-40pct',          '40% Off All Accounts',              'cold',    75,   75,   true),
-        ('cold-free-5k',        'Free CFD 2-Phase $5K Account',      'cold',    25,   25,   true),
-        ('cold-credit-5k-cfd1', '$16 Credit on $5K CFD 1-Phase',     'cold',    40,   40,   true),
-        ('cold-free-reset',     'Free Reset',                        'cold',    30,   30,   true),
-        ('cold-50pct',          '50% Off Any Account',               'cold',    15,   15,   true),
-        ('churned-free-reset',  'Free Reset',                        'churned', 75,   75,   true),
-        ('churned-20pct',       '20% Off All Accounts',              'churned', NULL, NULL, true),
-        ('churned-25pct',       '25% Off All Accounts',              'churned', NULL, NULL, true),
-        ('churned-credit-25k',  '$22 Credit on $25K CFD 2-Phase',    'churned', 50,   50,   true),
-        ('churned-30pct',       '30% Off All Accounts',              'churned', NULL, NULL, true),
-        ('churned-credit-50k',  '$37 Credit on $50K CFD 2-Phase',    'churned', 20,   20,   true),
-        ('churned-free-5k',     'Free CFD 2-Phase $5K Retry',        'churned', 10,   10,   true),
-        ('active-20pct',        '20% Off All Accounts',              'active',  NULL, NULL, true),
-        ('active-25pct',        '25% Off All Accounts',              'active',  NULL, NULL, true),
-        ('active-credit-50k',   '$25 Credit on $50K CFD 2-Phase',    'active',  40,   40,   true),
-        ('active-30pct',        '30% Off All Accounts',              'active',  NULL, NULL, true),
-        ('active-credit-100k',  '$50 Credit on $100K CFD 2-Phase',   'active',  25,   25,   true),
-        ('active-free-reset',   'Free Reset on Current Tier',        'active',  30,   30,   true),
-        ('active-50pct',        '50% Off Any Account',               'active',  10,   10,   true)
+        -- Cold pool (7 prizes)
+        ('cold-10k-for-55',          'Get a $10K Challenge for $55',              'cold',    150, 150, true),
+        ('cold-25k-for-104',         'Get a $25K Challenge for $104',             'cold',    80,  80,  true),
+        ('cold-reset-20pct',         '20% Off Any Reset',                         'cold',    80,  80,  true),
+        ('cold-reset-30pct',         '30% Off Any Reset',                         'cold',    40,  40,  true),
+        ('cold-40pct-entry',         '40% Off $5K or $10K 2-Phase',               'cold',    50,  50,  true),
+        ('cold-free-5k',             'Free $5K 2-Phase Account',                  'cold',    3,   3,   true),
+        ('cold-jackpot',             '50% Off $5K or $10K 2-Phase — Jackpot',     'cold',    10,  10,  true),
+        -- Churned pool (6 prizes)
+        ('churned-reset-20pct',      '20% Off Any Reset',                         'churned', 60,  60,  true),
+        ('churned-25pct',            '25% Off All Accounts',                      'churned', 80,  80,  true),
+        ('churned-reset-30pct',      '30% Off Any Reset',                         'churned', 40,  40,  true),
+        ('churned-25k-for-104',      'Step Up to $25K for $104',                  'churned', 50,  50,  true),
+        ('churned-40pct-entry',      '40% Off $5K or $10K 2-Phase',               'churned', 20,  20,  true),
+        ('churned-jackpot',          '50% Off $5K or $10K 2-Phase — Jackpot',     'churned', 8,   8,   true),
+        -- Active pool (8 prizes)
+        ('active-reset-20pct',       '20% Off Any Reset',                         'active',  50,  50,  true),
+        ('active-reset-30pct',       '30% Off Any Reset',                         'active',  30,  30,  true),
+        ('active-upsell-5k-to-10k',  'Step Up to $10K for $55',                   'active',  60,  60,  true),
+        ('active-upsell-10k-to-25k', 'Step Up to $25K for $104',                  'active',  40,  40,  true),
+        ('active-upsell-25k-to-50k', 'Step Up to $50K for $174',                  'active',  25,  25,  true),
+        ('active-upsell-50k-to-100k','Step Up to $100K for $349',                 'active',  15,  15,  true),
+        ('active-100k-loyalty',      '25% Off Any Account',                       'active',  20,  20,  true),
+        ('active-jackpot',           '50% Off $5K or $10K 2-Phase — Jackpot',     'active',  5,   5,   true)
       ON CONFLICT (prize_id) DO NOTHING
     `)
 
