@@ -75,7 +75,7 @@
               <!-- Campaign disclaimer -->
               <div>
                 <h4 class="font-semibold text-neutral-400 uppercase tracking-wider text-[10px] mb-1">Campaign Disclaimer</h4>
-                <p>This promotion ("Hatch a Chance") is available for a limited time only and may be withdrawn at any time without prior notice. One prize per person, per email address. Prizes are non-transferable and have no cash value. All coupon codes are single-use. TradersYard reserves the right to void any prize obtained through abuse, automation, or duplicate submissions, and to end the promotion at its sole discretion. Prize selection is server-side randomised and personalised based on account history. By participating, you agree to receive marketing communications from TradersYard.</p>
+                <p>This promotion ("Hatch a Chance") is available for a limited time only and may be withdrawn at any time without prior notice. One prize per person, per email address. Prizes are non-transferable and have no cash value. All coupon codes are single-use. TradersYard reserves the right to void any prize obtained through abuse, automation, or duplicate submissions, and to end the promotion at its sole discretion. Prize selection is server-side randomised. By participating, you agree to receive marketing communications from TradersYard.</p>
               </div>
 
               <!-- General Disclosure -->

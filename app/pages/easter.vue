@@ -311,24 +311,24 @@
             <IconEgg class="size-4" /> Earn a Second Crack
           </div>
           <h2 class="font-clash text-2xl md:text-3xl font-semibold text-white">
-            Invite a Friend.<br/>
-            <span class="text-campaign">They Crack. You Crack Again.</span>
+            Share Your Link.<br/>
+            <span class="text-campaign">They Win. You Win Again.</span>
           </h2>
           <p class="text-neutral-400 text-sm leading-relaxed max-w-md mx-auto">
-            After you crack your egg, you get a unique invite link. When a friend uses your link and cracks their egg, you earn a completely free second crack — a brand new prize draw.
+            After cracking your egg, you get a unique referral link. Share it — when a friend cracks their egg through your link, you unlock a brand new second draw. A completely fresh prize, no strings.
           </p>
           <div class="grid grid-cols-3 gap-4 max-w-md mx-auto pt-2">
             <div class="text-center space-y-2">
               <div class="w-10 h-10 bg-campaign rounded-xl flex items-center justify-center mx-auto text-black font-clash font-bold">1</div>
-              <p class="text-xs text-neutral-400">Crack your egg & get your link</p>
+              <p class="text-xs text-neutral-400">Crack your egg — get your referral link</p>
             </div>
             <div class="text-center space-y-2">
               <div class="w-10 h-10 bg-campaign rounded-xl flex items-center justify-center mx-auto text-black font-clash font-bold">2</div>
-              <p class="text-xs text-neutral-400">Send it to a friend</p>
+              <p class="text-xs text-neutral-400">Share it via WhatsApp, Discord, or X</p>
             </div>
             <div class="text-center space-y-2">
               <div class="w-10 h-10 bg-campaign rounded-xl flex items-center justify-center mx-auto text-black font-clash font-bold">3</div>
-              <p class="text-xs text-neutral-400">They crack → you get a second go</p>
+              <p class="text-xs text-neutral-400">Friend cracks → you get a second draw</p>
             </div>
           </div>
           <a href="#crack" class="inline-block bg-campaign hover:bg-campaign-dark text-black font-clash font-semibold px-6 py-3 rounded-xl transition-colors text-sm mt-2">
@@ -372,33 +372,37 @@
           </p>
         </div>
 
-        <!-- Top jackpot feature card -->
-        <div class="max-w-3xl mx-auto mb-6 reveal">
-          <div class="relative rounded-3xl overflow-hidden border border-campaign/40 bg-gradient-to-br from-campaign/10 via-campaign/5 to-transparent p-8 md:p-10 flex flex-col md:flex-row items-center gap-8">
-            <!-- Glow -->
+        <!-- Top 3 hero prize cards -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-3xl mx-auto mb-6 reveal">
+          <!-- Jackpot -->
+          <div class="relative rounded-3xl overflow-hidden border border-campaign/40 bg-gradient-to-br from-campaign/10 via-campaign/5 to-transparent p-7 flex flex-col">
             <div class="absolute inset-0 pointer-events-none">
-              <div class="absolute top-0 left-1/2 -translate-x-1/2 w-80 h-40 bg-campaign/15 blur-[60px] rounded-full" />
+              <div class="absolute top-0 left-1/2 -translate-x-1/2 w-48 h-24 bg-campaign/20 blur-[50px] rounded-full" />
             </div>
-            <!-- Badge -->
-            <div class="flex-shrink-0 text-center md:text-left z-10">
-              <div class="inline-flex items-center gap-2 bg-campaign text-black text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-widest mb-4">
-                <IconTrophy class="size-3.5" /> Jackpot
-              </div>
-              <div class="font-clash text-6xl md:text-7xl font-semibold text-campaign leading-none mb-2">50%</div>
-              <div class="text-white font-clash text-xl font-semibold">Off Your Challenge</div>
-              <div class="text-neutral-400 text-sm mt-1">$5K or $10K 2-Phase account</div>
+            <div class="inline-flex items-center gap-1.5 bg-campaign text-black text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-widest mb-4 self-start z-10">
+              <IconTrophy class="size-3" /> Jackpot
             </div>
-            <!-- Divider -->
-            <div class="hidden md:block w-px h-28 bg-white/10 flex-shrink-0" />
-            <!-- Details -->
-            <div class="z-10 space-y-3 text-center md:text-left">
-              <p class="text-neutral-300 text-sm leading-relaxed">The rarest prize in the pool. A $10K 2-Phase challenge for just <strong class="text-campaign">$39.50</strong> — that's less than a takeaway.</p>
-              <div class="flex flex-wrap gap-2 justify-center md:justify-start">
-                <span class="text-xs bg-white/5 border border-white/10 rounded-full px-3 py-1 text-neutral-400">Single-use coupon</span>
-                <span class="text-xs bg-white/5 border border-white/10 rounded-full px-3 py-1 text-neutral-400">Auto-applied at checkout</span>
-                <span class="text-xs bg-white/5 border border-white/10 rounded-full px-3 py-1 text-neutral-400">Limited inventory</span>
-              </div>
+            <div class="font-clash text-5xl font-semibold text-campaign leading-none mb-1 z-10">50%</div>
+            <div class="text-white font-clash text-base font-semibold z-10">Off Your Challenge</div>
+            <div class="text-neutral-400 text-xs mt-1 z-10">$5K or $10K 2-Phase · <strong class="text-campaign">$39.50</strong></div>
+          </div>
+          <!-- Free Account -->
+          <div class="relative rounded-3xl overflow-hidden border border-purple-500/30 bg-gradient-to-br from-purple-500/10 via-purple-500/5 to-transparent p-7 flex flex-col">
+            <div class="inline-flex items-center gap-1.5 bg-purple-500/20 text-purple-300 border border-purple-500/30 text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-widest mb-4 self-start">
+              <IconStarFilled class="size-3" /> Ultra Rare
             </div>
+            <div class="font-clash text-5xl font-semibold text-purple-300 leading-none mb-1">Free</div>
+            <div class="text-white font-clash text-base font-semibold">$5K 2-Phase Account</div>
+            <div class="text-neutral-400 text-xs mt-1">A full challenge — on us</div>
+          </div>
+          <!-- Free Reset -->
+          <div class="relative rounded-3xl overflow-hidden border border-green-500/30 bg-gradient-to-br from-green-500/10 via-green-500/5 to-transparent p-7 flex flex-col">
+            <div class="inline-flex items-center gap-1.5 bg-green-500/20 text-green-300 border border-green-500/30 text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-widest mb-4 self-start">
+              <IconRefresh class="size-3" /> Uncommon
+            </div>
+            <div class="font-clash text-5xl font-semibold text-green-300 leading-none mb-1">30%</div>
+            <div class="text-white font-clash text-base font-semibold">Off Any Reset</div>
+            <div class="text-neutral-400 text-xs mt-1">Restart your challenge for less</div>
           </div>
         </div>
 
@@ -418,60 +422,10 @@
           </div>
         </div>
 
-        <p class="text-center text-xs text-neutral-600 mt-10">Every egg is guaranteed to beat the public 20% floor. Your prize is drawn instantly when you crack.</p>
+        <p class="text-center text-xs text-neutral-600 mt-10">Every egg beats the public 20% floor — your prize is drawn the moment you crack.</p>
       </Container>
     </section>
 
-    <!-- ─── PRIZES SECTION ─── -->
-    <section class="py-20 bg-[#0B0B0B] border-t border-white/5">
-      <Container>
-        <div class="text-center max-w-2xl mx-auto mb-14 reveal">
-          <div class="inline-flex items-center gap-2 bg-campaign/10 border border-campaign/30 rounded-full px-4 py-1.5 text-xs font-semibold tracking-widest uppercase text-campaign mb-5">
-            <IconRosetteDiscount class="size-3.5" /> What's Inside the Eggs
-          </div>
-          <h2 class="font-clash text-3xl md:text-4xl font-semibold text-white mb-3">Every Egg Hides a Real Prize</h2>
-          <p class="text-neutral-400 text-base">All prizes are live coupons — single-use, auto-applied at checkout. Rarer prizes have limited inventory, so crack yours while they last.</p>
-        </div>
-
-        <!-- Tier legend -->
-        <div class="flex flex-wrap justify-center gap-2 mb-10 reveal">
-          <span v-for="t in tierLegend" :key="t.label"
-            class="inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-[11px] font-semibold border"
-            :style="{ borderColor: t.color + '55', backgroundColor: t.color + '18', color: t.color }">
-            <span class="size-1.5 rounded-full inline-block" :style="{ backgroundColor: t.color }" />
-            {{ t.label }}
-          </span>
-        </div>
-
-        <!-- Prize cards grid — rarest first, no prices shown -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 reveal">
-          <div
-            v-for="p in allPrizes"
-            :key="p.id"
-            class="group relative rounded-2xl border bg-white/3 p-5 transition-all duration-200 hover:-translate-y-0.5 hover:border-campaign/40 hover:bg-campaign/5 hover:shadow-[0_4px_24px_rgba(234,179,8,0.08)]"
-            :class="prizeListCardClass(p.tier)"
-          >
-            <!-- Tier badge + inventory -->
-            <div class="flex items-start justify-between mb-3">
-              <span
-                class="inline-flex items-center gap-1 rounded-full px-2.5 py-0.5 text-[10px] font-bold tracking-wider uppercase border"
-                :style="tierStyle(p.tier)"
-              >
-                {{ p.tier_label }}
-              </span>
-              <span v-if="p.inventory !== null" class="text-[10px] text-neutral-400 font-medium">
-                {{ p.inventory }} left
-              </span>
-              <span v-else class="text-[10px] text-neutral-400 font-medium">Unlimited</span>
-            </div>
-
-            <!-- Prize name only — no prices -->
-            <p class="font-clash font-semibold text-base text-white leading-snug">{{ p.name }}</p>
-          </div>
-        </div>
-
-      </Container>
-    </section>
   </div>
 </template>
 
