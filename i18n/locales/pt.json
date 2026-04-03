@@ -1,0 +1,678 @@
+{
+  "banner": {
+    "text1": "CONTA GRÁTIS DE 5K EM QUALQUER COMPRA",
+    "text2": "USE O CÓDIGO FREE5K"
+  },
+  "nav": {
+    "home": "Início",
+    "pricing": "Preços",
+    "tournaments": "Torneios",
+    "arena": {
+      "title": "Arena",
+      "tournaments": "Torneios",
+      "survivorShowdown": "Survivor Showdown"
+    },
+    "about": "Sobre",
+    "signIn": "Entrar",
+    "resources": {
+      "title": "Recursos",
+      "accountScaling": "Escalação de Conta",
+      "rules": "Regras",
+      "affiliate": "Afiliados",
+      "support": "Suporte",
+      "docs": "Documentação",
+      "blog": "Blog"
+    }
+  },
+  "footer": {
+    "appStore": "Baixar na App Store",
+    "googlePlay": "Disponível no Google Play",
+    "resources": {
+      "title": "Recursos",
+      "affiliate": "Programa de Afiliados",
+      "about": "Sobre",
+      "support": "Suporte",
+      "docs": "Documentação",
+      "blog": "Blog",
+      "accountScaling": "Escalação de Conta",
+      "rules": "Regras"
+    },
+    "products": {
+      "title": "Produtos",
+      "webTrader": "Web Trader",
+      "agenaTrader": "Agena Trader",
+      "agenaBroker": "Agena Broker"
+    },
+    "legal": {
+      "title": "Legal",
+      "terms": "Termos e Condições",
+      "privacy": "Política de Privacidade",
+      "cookies": "Política de Cookies",
+      "riskDisclaimer": "Aviso de Risco",
+      "imprint": "Impressão"
+    },
+    "disclaimers": {
+      "generalDisclosure": {
+        "title": "Divulgação Geral",
+        "content": "Os materiais e conteúdos fornecidos pela TradersYard GmbH, seja em nosso site, através de documentos distribuídos ou outras comunicações, são destinados apenas para fins informativos gerais. Este conteúdo não constitui consultoria de investimento, uma oferta para comprar ou vender valores mobiliários, ou um endosso de quaisquer instrumentos financeiros, empresas ou fundos. Os usuários não devem interpretar as informações como consultoria financeira personalizada. As informações fornecidas não são direcionadas a nenhuma jurisdição específica e não devem ser usadas de maneira que contrarie as leis ou regulamentos locais. A TradersYard GmbH, registrada em Kärntnerring 5-7, 1010 Viena, Áustria, adere a todos os padrões legais europeus e internacionais relevantes. © 2026. Todos os direitos reservados."
+      },
+      "riskDisclosure": {
+        "title": "Divulgação de Risco",
+        "content": "Envolver-se em futuros, forex e outras operações financeiras envolve risco significativo e não é apropriado para todos os investidores. É possível perder o valor total do seu investimento, ou até mais. Use apenas capital de risco - dinheiro que você pode perder sem impactar sua segurança financeira ou estilo de vida. A negociação deve ser realizada apenas por indivíduos que tenham o capital necessário, possam entender os riscos envolvidos e reconheçam que os resultados de negociação passados não garantem o desempenho futuro. A TradersYard GmbH não garante a precisão ou integridade das informações fornecidas e não é responsável por quaisquer perdas ou danos resultantes da confiança nessas informações."
+      },
+      "hypotheticalPerformance": {
+        "title": "Divulgação de Desempenho Hipotético",
+        "content": "Os resultados de desempenho baseados em dados hipotéticos têm muitas limitações inerentes e não devem ser considerados indicativos do desempenho futuro real. Os números de desempenho hipotético são frequentemente gerados com o benefício da retrospectiva e não envolvem risco financeiro, diferindo assim significativamente dos resultados de negociação reais. Muitos fatores, incluindo condições de mercado e a capacidade de suportar perdas, podem afetar adversamente os resultados de negociação reais. Depoimentos e outros materiais promocionais em nosso site não representam necessariamente as experiências de outros clientes e não preveem o desempenho futuro."
+      },
+      "customerCompensation": {
+        "title": "Divulgação de Compensação ao Cliente",
+        "content": "Todos os exemplos de negociação apresentados para fins de compensação são hipotéticos e não devem ser esperados para refletir os resultados de negociação ao vivo. É importante observar que as negociações hipotéticas e simuladas não representam totalmente os riscos financeiros associados à negociação real. Os traders são aconselhados de que qualquer conta alcançará lucros ou perdas semelhantes aos mostrados."
+      },
+      "cftcCompliance": {
+        "title": "Visão Geral de Conformidade da Regra 4.41 da CFTC",
+        "content": "De acordo com a Regra 4.41 da CFTC, os resultados de desempenho hipotéticos ou simulados têm uma limitação crítica: é imperativo abordar o uso de resultados de desempenho hipotéticos ou simulados em qualquer material publicitário. Tais resultados, sendo inerentemente limitados, não decorrem de atividades de negociação reais e, portanto, podem deturpar o impacto das condições reais do mercado, como liquidez. Esses modelos, muitas vezes construídos com o benefício da retrospectiva, carecem de valor preditivo em relação aos resultados futuros de negociação. Deve ser reconhecido que nenhuma garantia é fornecida de que qualquer conta de negociação alcançará lucros ou perdas semelhantes aos ilustrados e que a linguagem de divulgação de risco é vista como um aspecto vital para informar os clientes potenciais dessas limitações e dos riscos inerentes envolvidos. Além disso, é essencial observar que os depoimentos incluídos em tais anúncios não são indicativos das experiências de todos os clientes e não servem como garantia de desempenho ou sucesso futuros. As métricas de desempenho passadas não devem ser interpretadas como indicadores confiáveis de resultados futuros. A conformidade com essas estipulações não é apenas um requisito regulatório, mas uma medida crítica para garantir a transparência e proteger potenciais investidores de representações enganosas. Todos os anúncios devem incorporar essa linguagem de divulgação específica para permanecer em conformidade com a Regra 4.41 da CFTC."
+      }
+    },
+    "copyright": "© 2026 TradersYard. Todos os direitos reservados."
+  },
+  "common": {
+    "buttons": {
+      "getStarted": "Começar",
+      "joinDiscord": "Entrar no Discord",
+      "getFundedNow": "Obtenha Financiamento Agora",
+      "startPracticing": "Começar a Praticar",
+      "viewCompetitions": "Ver Competições",
+      "joinOurDiscord": "JUNTE-SE AO NOSSO DISCORD",
+      "enterEmail": "Digite seu e-mail"
+    },
+    "accessibility": {
+      "switchToDarkMode": "Mudar para modo escuro",
+      "switchToLightMode": "Mudar para modo claro",
+      "traderAvatar": "Avatar do trader",
+      "playVideo": "Reproduzir vídeo",
+      "videoThumbnail": "Miniatura do vídeo",
+      "openMenu": "Abrir menu de navegação",
+      "closeMenu": "Fechar menu de navegação",
+      "previousSlide": "Slide anterior",
+      "nextSlide": "Próximo slide",
+      "submitEmail": "Enviar e-mail",
+      "goToHomepage": "Ir para a página inicial"
+    },
+    "languages": {
+      "english": "Inglês",
+      "deutsch": "Alemão",
+      "portuguese": "Português",
+      "spanish": "Espanhol",
+      "french": "Francês",
+      "arabic": "Árabe",
+      "japanese": "Japonês"
+    }
+  },
+  "videoIntro": {
+    "heading": "Pule a Demo, Vá Direto para o Financiamento.",
+    "description": "Nós lhe damos poder de compra real de até €235.000, você faz o que faz de melhor. Arrase, saque, repita."
+  },
+  "discord": {
+    "heading": "ENTRE NO YARD",
+    "description": "Junte-se a outros traders no Yard. Receba atualizações, jogos gratuitos e insights sobre prop firms diariamente."
+  },
+  "newsletter": {
+    "heading": "Quer Mais Sorteios?",
+    "description": "Inscreva-se em nossa newsletter e seja o primeiro a saber sobre sorteios exclusivos, dicas de trading e ofertas especiais.",
+    "messages": {
+      "success": "Inscrição na newsletter bem-sucedida!",
+      "error": "Falha na inscrição. Por favor, tente novamente.",
+      "unexpected": "Ocorreu um erro. Por favor, tente novamente."
+    }
+  },
+  "faq": {
+    "chip": "faq",
+    "heading": "Perguntas Frequentes",
+    "topics": {
+      "gettingStarted": "Começando",
+      "challengeRules": "Regras do Desafio",
+      "payouts": "Pagamentos",
+      "accountManagement": "Gerenciamento de Conta",
+      "support": "Suporte"
+    },
+    "questions": {
+      "q1": "O que torna a TradersYard diferente de outras prop firms?",
+      "a1": "Focamos em transparência e velocidade. Sem regras ocultas, pagamentos ultra-rápidos em menos de 4 horas e o recurso mais procurado - sem trailing drawdown.",
+      "q2": "Quais são as regras sobre drawdown e consistência?",
+      "a2": "O drawdown diário é de 5% do seu saldo inicial, o drawdown máximo é de 10%. Sem dias mínimos de negociação. Não temos regras arbitrárias de consistência - apenas negocie de forma lucrativa e gerencie seu risco.",
+      "q3": "Há uma taxa mensal?",
+      "a3": "Sem taxas mensais. Nunca. Você paga uma taxa de avaliação única, e é isso. Para forex e futuros. Sem assinaturas, sem custos ocultos. Mantenha sua porcentagem de divisão de lucros sem nenhuma taxa contínua.",
+      "q4": "Quão rápidos são os pagamentos?",
+      "a4": "Processamos pagamentos em 1-2 dias úteis após a aprovação do KYC. Durante feriados, nenhum pagamento é processado. A maioria dos traders recebe seus pagamentos de participação nos lucros dentro de 4-6 horas úteis após solicitar um pagamento."
+    }
+  },
+  "paymentMethods": {
+    "heading": "Métodos de Pagamento Disponíveis"
+  },
+  "accountSelect": {
+    "heading": "Selecione o tamanho da conta 2 Fases"
+  },
+  "pages": {
+    "arena": {
+      "title": "Arena",
+      "heading": "Bem-vindo à Arena",
+      "description": "Escolha seu campo de batalha: participe de torneios ou junte-se ao último survivor showdown.",
+      "dropdown": {
+        "tournaments": "Torneios",
+        "survivorShowdown": "Survivor Showdown"
+      }
+    },
+    "home": {
+      "title": "TradersYard — Negocie com nosso capital, não com suas economias",
+      "reviews": {
+        "chip": "Da comunidade",
+        "heading": "Por Que Os Traders Nos Escolhem",
+        "description": "Traders reais. Lucros reais. Depoimentos reais da nossa comunidade.",
+        "reviews": [
+          {
+            "id": 1,
+            "text": "Empresa de prop trading muito boa, eles me pagaram hoje meu primeiro saque, então são legítimos e as regras são simples. Eu gosto da tradersyard"
+          },
+          {
+            "id": 2,
+            "text": "Negociar com TradersYard foi uma mudança de jogo para mim. Suas regras claras e sem taxas ocultas facilitaram focar no crescimento da minha conta. Além disso, a equipe de suporte está sempre lá quando preciso deles."
+          },
+          {
+            "id": 3,
+            "text": "Tive uma experiência muito boa com a tradersyard, recentemente participei de sua competição de trading de iPhone, que foi uma competição de duas semanas. Com regras muito simples e fáceis de seguir, conquistei o 1º lugar e fui premiado com o iPhone 16 como primeiro prêmio."
+          }
+        ]
+      },
+      "hero": {
+        "chip": "Backed by Andromeda Capital Partners Suisse",
+        "heading": "Bem-vindo ao Yard",
+        "description": "Obtenha até 500K em financiamento simulado. Mantenha até 95% dos lucros.",
+        "tradersAlreadyFunded": "20K+ traders ativos"
+      },
+      "pricing": {
+        "title": "Planos e preços",
+        "heading": "Selecione Seu Tipo de Conta",
+        "popular": "Mais Popular",
+        "account": "Conta de {account}",
+        "oneTimeFee": "Taxa Única",
+        "comingSoon": "Em Breve",
+        "drawdownTypes": {
+          "static": "Drawdown Estático",
+          "eod": "Drawdown EoD"
+        },
+        "cta": {
+          "button": "Obtenha Financiamento Agora",
+          "moneyBackGuarantee": "Garantia de Devolução do Dinheiro de 14 Dias"
+        },
+        "scaling": "Ver escalação de conta",
+        "features": {
+          "profitTarget": {
+            "label": "Meta de lucro",
+            "tooltip": "A meta de lucro que você precisa alcançar para passar na fase de desafio"
+          },
+          "dailyLossLimit": {
+            "label": "Limite de perda diária",
+            "tooltip": "Perda máxima permitida por dia de negociação"
+          },
+          "drawdownType": {
+            "label": "Tipo de drawdown",
+            "tooltip": "Tipo de método de cálculo do drawdown máximo",
+            "static": "Estático",
+            "eod": "Fim do Dia"
+          },
+          "maxDrawDown": {
+            "label": "Limite Máximo de Perda",
+            "tooltip": "Limite Máximo de Perda"
+          },
+          "newsTrading": {
+            "label": "Negociação em Notícias",
+            "allowed": "Permitido",
+            "restricted": "Restrito"
+          },
+          "minTradingDays": {
+            "label": "Dias mínimos de negociação",
+            "tooltip": "Limite de tempo para completar a fase de desafio",
+            "unlimited": "Ilimitado"
+          },
+          "leverage": {
+            "label": "Alavancagem",
+            "tooltip": "Alavancagem máxima disponível para negociação"
+          },
+          "resetFee": {
+            "label": "Taxa de Redefinição",
+            "tooltip": "A taxa que você paga para redefinir sua conta atual"
+          },
+          "weekendHold": {
+            "label": "Manutenção no Fim de Semana",
+            "allowed": "Permitido",
+            "restricted": "Restrito"
+          },
+          "maxContracts": {
+            "label": "Contratos Máximos",
+            "tooltip": "Número máximo de contratos que você pode negociar"
+          },
+          "dailyDrawdown": {
+            "label": "Drawdown Diário",
+            "tooltip": "Perda diária máxima permitida"
+          },
+          "consistency": {
+            "label": "Consistência",
+            "tooltip": "Requisitos de consistência para passar"
+          },
+          "overnightHolding": {
+            "label": "Manutenção Noturna",
+            "allowed": "Permitido",
+            "restricted": "Restrito",
+            "tooltip": "Se as posições podem ser mantidas durante a noite"
+          },
+          "payoutCycle": {
+            "label": "Ciclo de Pagamento",
+            "value": "1º sob demanda, 14 dias"
+          }
+        }
+      },
+      "howItWorks": {
+        "chip": "3 passos simples",
+        "heading": "Como funciona",
+        "steps": {
+          "evaluation": {
+            "title": "Avaliação",
+            "description": "Complete nossa avaliação de negociação para demonstrar suas habilidades e capacidades de gerenciamento de risco."
+          },
+          "verification": {
+            "title": "Verificação",
+            "description": "Passe pela nossa fase de verificação para provar consistência em sua abordagem de negociação."
+          },
+          "fundedAccount": {
+            "title": "Conta Financiada",
+            "description": "Obtenha sua conta financiada e comece a ganhar lucros reais mantendo até 95%."
+          }
+        },
+        "cta": "Obtenha Financiamento Agora"
+      }
+    },
+    "rules": {
+      "title": "Regras",
+      "heading": "Regras",
+      "tabs": {
+        "profitTarget": "Meta de Lucro",
+        "dailyMaxLossLimit": "Limite de Perda Diária e Máxima",
+        "leverageOffered": "Alavancagem oferecida",
+        "timeLimitsPayoutCycle": "Limites de Tempo e Ciclo de Pagamento",
+        "payoutsScalingPlans": "Pagamentos e Planos de Escalação",
+        "newsTrading": "Negociação em Notícias",
+        "overnightWeekendHolding": "Manutenção Noturna e de Fim de Semana",
+        "swapsCommission": "Swaps e Comissão",
+        "prohibitedPractices": "Práticas Proibidas",
+        "inactivityPolicy": "Política de Inatividade",
+        "payoutCap": "Limite de Pagamento"
+      },
+      "profitTarget": {
+        "title": "Meta de Lucro",
+        "content": "## Contas de 2 Fases:\n\n### Fase 1: 10%\n\nPara passar na Fase 1, você deve alcançar um **lucro de 10%** baseado no seu saldo inicial de partida.\n\nPor exemplo, se sua conta de desafio começa em **$100.000**, você deve aumentá-la para **$110.000** com todas as negociações fechadas para atingir a meta.\n\n### Fase 2: 5%\n\nNa Fase 2, a meta de lucro é de **5%** do seu saldo inicial de partida. Por exemplo, se sua conta de desafio começa em $100.000, você deve aumentá-la para $105.000 com todas as negociações fechadas para atingir a meta.\n\n### Conta Financiada: Sem Meta\n\nDepois de passar nas duas fases, você recebe uma conta financiada.\n**Não há metas de lucro fixas em contas financiadas.**\n\n## Contas de 1 Fase:\n\nPara contas de 1 Fase, a meta de lucro é de **10%** para a fase 1 e **sem meta** para a conta financiada.\n\n## Contas Futures (1 Fase):\n\nContas Futures de Drawdown Estático têm meta de lucro de 8%.\n\nContas Futures de Drawdown EoD têm meta de lucro de 6%."
+      },
+      "dailyMaxLossLimit": {
+        "title": "Limite de Perda Diária e Máxima",
+        "content": "## Contas de 2 Fases:\n\n### Limite de Perda Diária: 5%\n\nVocê tem permissão para uma perda diária máxima de **5%** baseada no seu capital inicial do dia às 00:00 UTC.\n\nPor exemplo, sua conta de 100k terá um limite de perda diária de $5.000. Se seu dia começar com um capital de $107.000, então seu capital não deve cair abaixo de $102.000 em nenhum momento durante esse dia.\n\n### Limite de Perda Máxima: 10%\n\nO limite de perda máxima é estático em **10%** do seu saldo inicial.\nIsso significa que sua conta não deve cair abaixo de $90.000 em nenhum momento durante o desafio de 100k.\n\nViolar o limite de perda diária ou máxima fará sua conta falhar em qualquer fase ou conta financiada.\n\n⚠️ **Política de Falha e Redefinição**\n\nSe sua conta violar o limite de perda diária ou máxima, ela falha imediatamente.\n\nContas falidas não podem continuar negociando e devem ser redefinidas para a fase 1.\n\nPor exemplo, se você falhar em uma conta financiada em um desafio de 2 Fases, após a redefinição sua conta será redefinida para a Fase 1.\n\n## Contas de 1 Fase:\n\nPara contas de 1 Fase, o limite de perda diária é de **3%** e o limite de perda máxima é de **6%**\n\n## Contas Futures (1 Fase):\n\nNenhum Drawdown Diário em quaisquer contas Futures.\n\nOs planos Estáticos têm um Drawdown Máximo de 4%. Isso é verdadeiramente estático e nunca arrasta.\n\nContas Futures de Drawdown EoD têm os seguintes valores de drawdown: para Conta de 50K - $2.000, para Conta de 100K - $3.000 e para Conta de 150K - $4.500."
+      },
+      "leverageOffered": {
+        "title": "Alavancagem Oferecida",
+        "content": "Fornecemos diferentes alavancagens dependendo do tipo de conta. Maior alavancagem dá aos traders mais flexibilidade, enquanto menor alavancagem é projetada para aqueles que preferem negociação swing de longo prazo com exposição reduzida ao risco.\n\n**Contas Swing de 2 Fases:** Forex: 1:30, Commodities: 1:10, Índices: 1:15, Cripto: 1:1, Ações: 1:1\n\n**Contas de 1 Fase:** Forex: 1:30, Commodities: 1:10, Índices: 1:15, Cripto: 1:1, Ações: 1:1"
+      },
+      "_comment_leverageOffered_2PhaseStandard": "TEMPORARILY HIDDEN - UNCOMMENT WHEN NEEDED: **Contas Padrão de 2 Fases:** Forex: 1:100, Commodities: 1:30, Índices: 1:50, Cripto: 1:2, Ações: 1:2",
+      "timeLimitsPayoutCycle": {
+        "title": "Limites de Tempo e Ciclo de Pagamento",
+        "content": "Não há limites de tempo em nenhuma fase do desafio ou na conta financiada para passar. Os traders podem progredir completamente no seu próprio ritmo sem a pressão de prazos.\n\nUma vez que uma conta financiada é iniciada, o primeiro pagamento pode ser solicitado após 14 dias. Se um trader estiver em perda mas não violou a conta, ainda não há restrição ou ciclo forçando-o a redefinir - eles podem levar o tempo necessário para retornar à lucratividade e solicitar um pagamento. O ciclo de pagamento só reinicia quando um trader realmente solicita um pagamento, o que significa que o tempo permanece totalmente sob o controle do trader.\n\nPor exemplo, um trader que inicia uma conta financiada no Dia 0 torna-se elegível para solicitar um pagamento no Dia 14. Se ele continuar negociando sem solicitar um pagamento, não haverá necessidade de novo ciclo. Mesmo no Dia 45, nada muda até que eles escolham solicitar um pagamento. Se o trader decidir solicitar um pagamento no Dia 50, só então o ciclo de pagamento reinicia uma vez que o valor do pagamento é transferido, e a próxima janela de 14 dias começa a partir desse ponto.\n\nPara contas Futures, o pagamento mínimo é de 1% do saldo inicial."
+      },
+      "payoutsScalingPlans": {
+        "title": "Pagamentos e Planos de Escalação",
+        "content": "## Pagamentos\n\nOs traders podem solicitar um pagamento uma vez que seus lucros atinjam $50 ou mais, ao final de cada ciclo de pagamento.\n\nPara retirar pagamentos de contas Futures, o valor mínimo de pagamento é de 1% do saldo inicial.\n\nPrimeiro pagamento para planos Futures estão sob demanda.\n\n## Planos de Escalação\n\nVocê será elegível para escalar sua conta financiada atual, somente se:\n\n- Você solicitou pagamentos totais de mais de 10% do saldo da conta nos últimos 90 dias\n- Esses pagamentos devem ter sido feitos da mesma conta financiada, seja através de uma única solicitação de pagamento ou múltiplas solicitações combinadas distribuídas ao longo desses 90 dias\n- A conta não deve ter falido durante este período de 90 dias\n- O período de 90 dias é contado a partir da data em que você recebeu sua primeira conta financiada nesse nível\n- Se você não puder atingir 10% em pagamentos totais dentro de 90 dias, então a escalação será rejeitada e um novo período de 90 dias será iniciado nessa conta financiada\n- A conta será revisada para escalação durante o processo de retirada de pagamento\n\nVocê pode ver um plano de escalação completo [aqui](/account-scaling)\n\nNenhum plano de Escalação disponível para contas Futures\n\n⸻\n\n### **Exemplo - O trader começa com uma conta de $50.000:**\n\n**Passo 1 - Início do Período de Revisão**\n\nO trader realiza sua primeira negociação em 10 de janeiro.\n\nIsso inicia sua janela de revisão de 90 dias (10 Jan → 10 Abr).\n\n⸻\n\n**Passo 2 - O Trader Alcança 10% de Lucro**\n\nDentro desses 90 dias, o trader ganha $5.000, que é 10% do saldo inicial, e solicita um pagamento.\n\nPorque ele atingiu o requisito dentro do período de revisão, ele se qualifica para escalação.\n\n⸻\n\n**Passo 3 - A Conta Escala em 20%**\n\nA conta aumenta em 20% do saldo inicial original:\n\n- Saldo Original: $50.000\n- Aumento de Escalação (20%): $10.000\n- Novo Saldo: $60.000\n\n⸻\n\n**Passo 4 - Nova Janela de Revisão de 90 Dias**\n\nUm novo período de revisão de 90 dias começa no dia em que a escalação é aplicada.\n\nExemplo:\n\nSe a escalação for aplicada em 10 de abril, a nova janela de revisão é:\n\n10 Abr → 10 Jul\n\nPara escalar novamente, o trader deve ganhar 10% do novo saldo ($60.000) dentro deste próximo período de 90 dias.\n\n⸻\n\n**Se o Trader Não Alcançar 10%**\n\nSe o trader não atender ao requisito dentro da janela de 90 dias, ele será simplesmente revisado novamente no próximo ciclo de 90 dias."
+      },
+      "newsTrading": {
+        "title": "Negociação em Notícias",
+        "content": "A negociação em notícias é permitida em contas de 2 Fases CFD e contas de 1 Fase Futures, mas não é permitida em contas de 1 Fase CFD.\n\nA negociação é restrita durante eventos de notícias de alto impacto. Especificamente, os traders não podem abrir ou fechar negociações dentro de 2 minutos antes ou depois de uma divulgação de notícias de alto impacto. Durante este período, quaisquer ordens pendentes, incluindo stop loss e take profit das posições existentes, não podem ser executadas pelo sistema.\n\nRecomendamos fortemente fechar posições abertas antes de tais eventos de notícias para evitar volatilidade inesperada e perdas."
+      },
+      "overnightWeekendHolding": {
+        "title": "Manutenção Noturna e de Fim de Semana",
+        "content": "**Manutenção Noturna:**\n\nPermitida em todos os tipos de conta, exceto contas Futures. Os traders podem manter posições abertas além do fechamento do mercado a cada dia em contas CFD. Em contas Futures, as negociações serão automaticamente fechadas no fechamento do mercado de cada dia.\n\n**Manutenção de Fim de Semana:**\n\nPermitida apenas em Contas Swing de 2 Etapas. Para todos os outros tipos de conta, as posições serão automaticamente fechadas na sexta-feira (incluindo cripto).\n\nNovas posições podem ser abertas em Cripto no fim de semana.\n\n**Taxas de Swap:**\n\nTodas as posições mantidas durante a noite estão sujeitas a taxas de swap."
+      },
+      "prohibitedPractices": {
+        "title": "Práticas Proibidas",
+        "content": "Para manter a negociação justa e profissional, certas práticas não são permitidas. Se essas regras forem quebradas, sua conta pode ser investigada, restrita ou suspensa.\n\n### Limites de Ordens e Frequência\n\nVocê não pode colocar mais de 500 ordens ativas de uma vez. A negociação de alta frequência também é proibida - o sistema bloqueará mais de 300 solicitações por minuto (colocar, modificar ou cancelar ordens).\n\n### Exploits de Mercado\n\nEstratégias de negociação que dependem de falhas do sistema, feeds atrasados ou arbitragem são proibidas. Qualquer tentativa de manipular preços ou explorar a plataforma resultará no fechamento da conta.\n\n### Disciplina de Gerenciamento de Risco\n\nMetas de lucro não podem ser alcançadas com uma única negociação superdimensionada. Espera-se que os traders negociem consistentemente com tamanho de lote apropriado e stop losses, em vez de assumir riscos imprudentes.\n\n### Múltiplas Contas\n\nHedge entre contas não é permitido. Abrir posições opostas em diferentes contas, mesmo se pertencentes à mesma pessoa ou grupo, levará à desqualificação.\n\n### Comportamento de Apostas\n\nMartingale, estratégias de grade, tamanhos de lote aleatórios ou scalping imprudente são considerados apostas e são estritamente proibidos.\n\n### Estilo de Negociação\n\nEvite superconcentração em um único ativo, apostas fortemente unilaterais sem análise ou overtrading impulsivo. Uma abordagem disciplinada e pesquisada é necessária.\n\nSem HFT, sem exploits, sem estratégias de apostas, sem hedge multi-conta - sempre negocie com consistência e disciplina."
+      },
+      "inactivityPolicy": {
+        "title": "Política de Inatividade",
+        "content": "Todas as contas devem permanecer ativas para manter os privilégios de negociação. Se uma conta não mostrar atividade de negociação por 30 dias consecutivos, ela será marcada como inativa. Contas inativas são automaticamente excluídas após 30 dias de inatividade. Uma vez excluída, a conta não pode ser recuperada, e o trader deve comprar um novo desafio para continuar.\n\nRecomendamos colocar pelo menos uma negociação dentro de cada período de 30 dias para garantir que sua conta permaneça ativa.\n\nNOTA - No caso de você estar viajando e não poder fazer uma negociação, por favor envie uma mensagem para nossa equipe de suporte e faremos arranjos para que você preserve sua conta."
+      },
+      "payoutCap": {
+        "title": "Limite de Pagamento",
+        "content": "Para todas as contas CFD, não há limite de pagamento. Os traders podem solicitar uma recompensa de qualquer tamanho.\n\nPara todas as contas Futures, os primeiros 5 pagamentos têm os seguintes limites:\n\n- em conta 10K Static Drawdown: $500\n- em conta 25K Static Drawdown: $1.000\n- em conta 50K Static Drawdown: $2.000\n- em conta 50K EoD Drawdown: $3.000\n- em conta 100K EoD Drawdown: $4.000\n- em conta 150K EoD Drawdown: $5.000\n\nSe o trader atingir o limite de pagamento na conta financiada, todas as negociações serão automaticamente fechadas e a negociação será pausada até que o trader receba o pagamento."
+      },
+      "swapsCommission": {
+        "title": "Swaps e Comissão",
+        "content": "**Comissões:**\n\nForex, Índices, Cripto, Commodities:\n$1,5 por lote, cobrado por execução\nex., 0,5 lote = $0,75\n\nAções e CFDs de ETF:\n0,025% do valor da negociação\nex., 100 ações a $100 = $2,50\n\n**Swaps (Taxas Noturnas):**\n\nNegociações longas: -0,008% por lote\nNegociações curtas: +0,002% por lote\nAplicado diariamente em posições abertas"
+      }
+    },
+    "about": {
+      "title": "Sobre",
+      "heading": "Sobre Nós",
+      "description": "O Yard é onde os traders se provam. Somos uma prop firm global construída na Áustria. Apoiada por capital suíço, confiada mundialmente. Regras claras, pagamentos diários.",
+      "pivot": {
+        "chip": "Nossa História",
+        "heading": "A Virada Que Nos Definiu"
+      },
+      "timeline": {
+        "heading": "Nossa Jornada",
+        "description": "De uma ideia de rede social austríaca a uma plataforma de negociação global confiada por milhares de traders em todo o mundo.",
+        "story": {
+          "intro": "TradersYard não começou perfeita. Começamos na Áustria como uma rede social para traders. Parecia bom no papel, mas aprendemos rápido - os traders não precisam de outro feed, eles precisam de oportunidade real. Então pivotamos de feeds e seguidores para uma arena construída em torno de desafios, regras transparentes e pagamentos rápidos e previsíveis.",
+          "present": "Hoje, nossa plataforma interna e a comunidade Discord facilitam praticar, passar e negociar com confiança - ainda nascido daquela ideia original de traders ajudando traders, agora com capital por trás.",
+          "future": "Olhando para frente, nosso objetivo é claro: construir o caminho mais confiável para traders crescerem mundialmente. Focamos nos disciplinados, nos ambiciosos e naqueles sérios sobre fazer da negociação seu ofício. O que nos diferencia é simples: regras justas, pagamentos diários, zero truques e a consistência em que os traders podem realmente contar.",
+          "cta": "Então, você acha que tem o que é preciso para se tornar o próximo trader financiado da TradersYard? Há apenas uma maneira de descobrir. Aproveite nossa promoção atual enquanto durar, garanta seu lugar e comece a provar sua vantagem. Vemos você dentro do Yard."
+        },
+        "2015": "Manuel e Gilbert construindo AgenaTrader, uma Plataforma de Negociação multi-broker para Traders avançados",
+        "2022": "Rede Social para negociação lançada e usada por mais de 20k traders",
+        "2023": "Investimento de Private Equity da Andromeda Capital Partner Suisse e Pivot para Foco em Prop-Trading",
+        "2024": "Construindo a Infraestrutura completa de Prop-Trading e Tech-Stack internamente, lançando o novo produto de prop-trading",
+        "2025": "Adicionando planos clássicos de 2 etapas e 1 etapa ao portfólio de produtos, expandindo para os EUA com desafios baseados em futuros"
+      },
+      "mission": {
+        "chip": "Nossa Missão",
+        "heading": "Tornar a Negociação Justa Novamente",
+        "items": {
+          "i1": "Transformar habilidade em Oportunidade",
+          "i2": "Transformar negociações em Pagamentos",
+          "i3": "Transformar traders em Profissionais"
+        }
+      },
+      "footprint": {
+        "chip": "nossa pegada global",
+        "heading": "Mundial, Um Yard",
+        "description": "Cada ponto vibrante representa um país onde um ou mais membros de nossa equipe contribuem com seus talentos únicos.",
+        "countries": {
+          "au": "Áustria",
+          "pl": "Polônia",
+          "ua": "Ucrânia",
+          "in": "Índia",
+          "az": "Azerbaijão",
+          "pa": "Paquistão",
+          "de": "Alemanha",
+          "sa": "Arábia Saudita",
+          "us": "EUA",
+          "is": "Israel"
+        }
+      }
+    },
+    "contact": {
+      "title": "Contato",
+      "heading": "Estamos Aqui Para Ajudar",
+      "description": "Perguntas sobre regras, pagamentos ou obtenção de financiamento? Converse ao vivo, envie um e-mail ou junte-se ao nosso Discord, o que funcionar melhor para você.",
+      "email": {
+        "title": "Suporte por E-mail",
+        "description": "Entre em contato por e-mail para assistência detalhada a qualquer momento."
+      },
+      "liveChat": {
+        "title": "Chat ao Vivo",
+        "description": "Obtenha suporte instantâneo 24/5 de nossa equipe para todas as suas perguntas e nossos serviços.",
+        "button": "Iniciar Chat ao Vivo"
+      },
+      "discord": {
+        "title": "Comunidade Discord",
+        "description": "Conecte-se conosco ou milhares de traders no Discord.",
+        "button": "Entrar no Servidor Discord"
+      }
+    },
+    "tournaments": {
+      "title": "Torneios",
+      "heading": "Jogue torneios de negociação gratuitos (com prêmios em dinheiro real)",
+      "description": "Jogos de negociação totalmente interativos e sem risco. Preveja o futuro, elimine seus inimigos e ganhe grande.",
+      "stats": {
+        "traders": "Traders ativos mensais",
+        "prizes": "Prêmios concedidos",
+        "countries": "Países"
+      },
+      "features": {
+        "f1": {
+          "title": "Prêmios em Dinheiro REAL",
+          "text": "Nossa plataforma proprietária oferece recursos únicos e controle total."
+        },
+        "f2": {
+          "title": "Mais de 15 anos de Experiência Fintech",
+          "text": "Entregando soluções de negociação confiáveis desde 2013."
+        },
+        "f3": {
+          "title": "Empresa Austríaca Confiável",
+          "text": "Operando sob a lei da UE para transparência e segurança."
+        }
+      },
+      "cta": {
+        "chip": "Gratuito",
+        "heading": "Junte-se a jogos de negociação gratuitos todos os dias",
+        "description": "Jogue sem custo - aprenda, compita e qualifique-se para desafios financiados sem arriscar seu próprio dinheiro.",
+        "button": "Entrar na arena gratuitamente"
+      },
+      "howItWorks": {
+        "chip": "Como Funciona",
+        "heading": "Junte-se a milhares de traders competindo todos os dias",
+        "steps": {
+          "join": {
+            "title": "Junte-se gratuitamente",
+            "text": "Escolha um torneio que se encaixe no seu estilo de negociação da nossa lista de eventos em andamento."
+          },
+          "noRisk": {
+            "title": "Negocie Sem Risco",
+            "text": "Um lugar seguro para aprimorar habilidades antes de entrar em contas financiadas."
+          },
+          "rise": {
+            "title": "Suba ao topo",
+            "text": "Compita contra traders de todo o mundo e veja onde suas habilidades se classificam."
+          }
+        }
+      },
+      "latest": {
+        "chip": "Ao vivo da arena",
+        "heading": "Dê uma olhada nos torneios atuais",
+        "error": {
+          "message": "Algo deu errado",
+          "button": "Tentar Novamente"
+        },
+        "empty": "Nenhum torneio em andamento ou próximo no momento.",
+        "status": {
+          "ongoing": "Em andamento",
+          "upcoming": "Próximo"
+        },
+        "reward": "Recompensa",
+        "startDate": "Data de início",
+        "endDate": "Data de término",
+        "startsIn": "Começa em",
+        "endsIn": "Termina em",
+        "participants": "Participantes",
+        "cta": "Ver Detalhes"
+      }
+    },
+    "affiliate": {
+      "title": "Afiliados",
+      "heading": "Monetize Sua Comunidade de Negociação",
+      "description": "Transforme sua rede em renda e ganhe 12-25% em cada indicação.",
+      "button": "Entrar no Programa de Afiliados",
+      "stats": {
+        "revenueSplit": "Divisão de Receita",
+        "cookieRetention": "Retenção de Cookie"
+      },
+      "tiers": {
+        "heading": "Sistema de Níveis de Afiliados",
+        "description": "Aumente seus ganhos à medida que traz mais traders para a TradersYard. Níveis mais altos desbloqueiam melhores comissões e recompensas exclusivas.",
+        "bronze": {
+          "name": "Bronze",
+          "requirement": "Nível de entrada padrão",
+          "benefit1": "12% em avaliações e resets",
+          "benefit2": "Saques a cada 30 dias"
+        },
+        "silver": {
+          "name": "Prata",
+          "requirement": "Mín. 50 indicações",
+          "benefit1": "15% de comissão",
+          "benefit2": "1 desafio de $25.000 grátis",
+          "benefit3": "Saques a cada 14 dias"
+        },
+        "gold": {
+          "name": "Ouro",
+          "requirement": "Mín. 125 indicações",
+          "benefit1": "18% de comissão",
+          "benefit2": "1 desafio de $50.000 grátis",
+          "benefit3": "Saques a cada 7 dias"
+        },
+        "diamond": {
+          "name": "Diamante",
+          "requirement": "Mín. 250 indicações",
+          "benefit1": "20% de comissão",
+          "benefit2": "1 desafio de $100.000 grátis",
+          "benefit3": "Saques a cada 7 dias"
+        },
+        "elite": {
+          "name": "Elite",
+          "requirement": "Apenas por convite, mín. 500 indicações",
+          "benefit1": "25% de comissão",
+          "benefit2": "5 desafios de $100.000 grátis",
+          "benefit3": "Acesso ao Círculo de Parceiros Elite",
+          "benefit4": "Saques a cada 7 dias"
+        }
+      },
+      "steps": {
+        "register": {
+          "title": "Registre-se gratuitamente",
+          "text": "Você obtém acesso ao nosso portal de parceiros onde pode solicitar sua URL de rastreamento, bem como seu próprio cupom personalizado que você pode fornecer ao seu público para preços de desafio reduzidos."
+        },
+        "shareCode": {
+          "title": "Compartilhe seus códigos de indicação",
+          "text": "Se seguidores do seu público clicarem em sua URL de indicação ou usarem seu código de cupom personalizado, você será atribuído como afiliado e começará a participar da receita gerada pela indicação."
+        },
+        "earn": {
+          "title": "Ganhe com sua comunidade",
+          "text": "Para cada novo trader que você trouxer para a TradersYard, você ganha 12-25% da receita gerada dependendo do seu nível. Você é atribuído por 30 dias e pode sacar de acordo com seu nível."
+        }
+      },
+      "cta": {
+        "heading": "Junte-se a milhares de traders e ganhe dinheiro com eles",
+        "description": "Comece gratuitamente, conecte-se com traders em todo o mundo e lucre com nosso programa de parceiros.",
+        "button": "Comece a Ganhar Hoje"
+      }
+    },
+    "accountScaling": {
+      "title": "Escalação de Conta",
+      "heading": "Plano de Escalação e Estrutura de Pagamento",
+      "headers": {
+        "accountBalance": "Saldo da Conta",
+        "balanceTarget": "Meta de pagamento dentro de 90 dias (10%)",
+        "payoutRatio": "Proporção de Pagamento"
+      },
+      "buttons": {
+        "getFunded": "Obter Financiamento",
+        "getFundedWith": "Obter Financiamento com {balance}"
+      },
+      "scalingRuleNotice": "A partir de 21 de novembro de 2025 (data de compra) a regra de escalação de 90 dias é aplicada a todos os desafios da TradersYard"
+    },
+    "survivorShowdown": {
+      "title": "TradersYard Survivor Showdown",
+      "heading": "TradersYard Survivor Showdown",
+      "description": "Negocie. Compita. Sobreviva. Torne-se o Campeão de Negociação Definitivo.",
+      "intro": {
+        "text": "Bem-vindo ao TradersYard Survivor Showdown - batalhas de negociação em tempo real e multi-estágios onde apenas os traders mais afiados sobrevivem. Pronto para ser o último trader de pé?"
+      },
+      "prizes": {
+        "heading": "Estrutura de Prêmios",
+        "mainHeading": "Compita. Ganhe.",
+        "subHeading": "Reivindique Sua Parte de € 6.500 em Prêmios!",
+        "description": "O TradersYard Survivor Showdown não é apenas sobre provar suas habilidades - é sobre recompensá-las. Com um prêmio total de € 6.500, os 10 melhores traders compartilharão recompensas em dinheiro e desafios de negociação exclusivos que podem levar sua jornada de negociação ao próximo nível.",
+        "headers": {
+          "place": "Lugar",
+          "cash": "Dinheiro",
+          "challenge": "Desafio",
+          "total": "Total"
+        },
+        "firstPlace": {
+          "title": "1º Lugar",
+          "cash": "€3000 em Dinheiro",
+          "challenge": "Desafio de 100k",
+          "worthTotal": "Valor Total: €3749"
+        },
+        "secondPlace": {
+          "title": "2º Lugar",
+          "cash": "€1500 em Dinheiro",
+          "challenge": "Desafio de 50k",
+          "worthTotal": "Valor Total: €1799"
+        },
+        "thirdPlace": {
+          "title": "3º Lugar",
+          "cash": "€500",
+          "challenge": "Desafio de 20k",
+          "worthTotal": "Valor Total: €649"
+        },
+        "fourthToTenth": {
+          "title": "4º - 10º Lugar",
+          "cash": "-",
+          "challenge": "Desafio de 5k",
+          "worthEach": "Valor Cada: €49"
+        }
+      },
+      "howItWorks": {
+        "heading": "Como funciona",
+        "stages": {
+          "title": "Estágios",
+          "description": "Compita em fases estruturadas com dias de negociação, dias de jogos e eliminações avançando você em direção a se tornar campeão."
+        },
+        "tradingDays": {
+          "title": "Dias de Negociação",
+          "description": "Teste suas habilidades contra concorrentes, entregue resultados consistentes e sobreviva a eliminações baseadas em desempenho."
+        },
+        "gamingDays": {
+          "title": "Dias de Jogos",
+          "description": "Junte-se a desafios interativos do Discord, colabore ou confie em sua intuição para passar testes preditivos - ou enfrente a eliminação."
+        },
+        "eliminations": {
+          "title": "Eliminações",
+          "description": "Apenas os melhores permanecem; a cada dia, os traders mais fracos são eliminados, aumentando constantemente as apostas e a intensidade."
+        }
+      },
+      "joinButton": {
+        "joinWithSpots": "Entrar - {spots} vagas restantes",
+        "joinWaitlist": "Entrar na Lista de Espera",
+        "registrationClosed": "Inscrição Encerrada",
+        "loading": "Carregando..."
+      }
+    },
+    "1v1_leaderboard": {
+      "heading": "Classificação 1v1",
+      "pair": "Dupla {pair}",
+      "vs": "VS",
+      "disabled": "Estamos preparando as equipes. Por favor, volte em breve!"
+    },
+    "5v5_leaderboard": {
+      "heading": "Classificação 5v5",
+      "team": "Equipe {team}",
+      "total_pl": "Lucro/Prejuízo Total: {pl}",
+      "disabled": "Estamos preparando as equipes. Por favor, volte em breve!"
+    }
+  },
+  "notice": {
+    "button": "Fechar",
+    "text": "Por favor, note que todas as contas fornecidas aos nossos clientes são contas demo com fundos virtuais, e toda a negociação ocorre em um ambiente simulado. Para saber mais, visite nossa seção de FAQ."
+  },
+  "giveaway": {
+    "title": "QUER UMA CHANCE DE GANHAR UM DESAFIO DE $100K?",
+    "subtitle": "Digite seu e-mail para ter uma chance de ganhar uma conta de desafio de $100K grátis. Selecionamos vencedores aleatoriamente todos os meses!",
+    "enterButton": "Participar do Sorteio",
+    "notInterestedButton": "Não Interessado",
+    "formTitle": "QUER UMA CHANCE DE GANHAR UM DESAFIO DE $150K?",
+    "formSubtitle": "Digite seu e-mail abaixo para participar do nosso sorteio mensal",
+    "submitButton": "Continuar",
+    "successTitle": "VOCÊ ESTÁ DENTRO",
+    "successMessage": "Por favor, verifique seu e-mail para mais detalhes",
+    "backToSite": "Voltar ao Site",
+    "messages": {
+      "success": "Inscrição no sorteio bem-sucedida!",
+      "error": "Falha ao participar do sorteio. Por favor, tente novamente.",
+      "unexpected": "Ocorreu um erro. Por favor, tente novamente."
+    }
+  }
+}

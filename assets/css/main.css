@@ -1,0 +1,411 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Clash Display Font Family - using 'optional' for faster LCP on slow connections */
+/* 'optional' renders with system font immediately, swaps to Clash Display only if loaded within 100ms */
+@font-face {
+  font-family: "Clash Display";
+  src: url("/landing/fonts/clash-display/ClashDisplay-Extralight.woff2")
+    format("woff2");
+  font-weight: 200;
+  font-style: normal;
+  font-display: optional;
+}
+
+@font-face {
+  font-family: "Clash Display";
+  src: url("/landing/fonts/clash-display/ClashDisplay-Light.woff2")
+    format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: optional;
+}
+
+@font-face {
+  font-family: "Clash Display";
+  src: url("/landing/fonts/clash-display/ClashDisplay-Regular.woff2")
+    format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: optional;
+}
+
+@font-face {
+  font-family: "Clash Display";
+  src: url("/landing/fonts/clash-display/ClashDisplay-Medium.woff2")
+    format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: optional;
+}
+
+@font-face {
+  font-family: "Clash Display";
+  src: url("/landing/fonts/clash-display/ClashDisplay-Semibold.woff2")
+    format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  /* Use 'swap' for semibold since it's preloaded - ensures hero heading renders in Clash Display */
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Clash Display";
+  src: url("/landing/fonts/clash-display/ClashDisplay-Bold.woff2")
+    format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: optional;
+}
+
+/* Inter Font Family - loaded from Google Fonts CDN (~25KB WOFF2 vs 444KB local TTF) */
+/* See nuxt.config.ts head.link for the Google Fonts stylesheet */
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    /* System font stack as fallback while Inter loads (444KB TTF) */
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      "Helvetica Neue", Arial, sans-serif;
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    /* System font stack matches Clash Display's geometric style for minimal layout shift */
+    font-family: "Clash Display", -apple-system, BlinkMacSystemFont, "Segoe UI",
+      system-ui, sans-serif;
+  }
+}
+
+@property --from {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@layer utilities {
+  /* Scroll reveal animations */
+  .scroll-reveal {
+    opacity: 0;
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+
+  .scroll-reveal.fade-up {
+    transform: translateY(30px);
+  }
+
+  .scroll-reveal.fade-down {
+    transform: translateY(-30px);
+  }
+
+  .scroll-reveal.fade-left {
+    transform: translateX(30px);
+  }
+
+  .scroll-reveal.fade-right {
+    transform: translateX(-30px);
+  }
+
+  .scroll-reveal.zoom-in {
+    transform: scale(0.9);
+  }
+
+  .scroll-reveal.revealed {
+    opacity: 1;
+    transform: translateY(0) translateX(0) scale(1);
+  }
+
+  /* Staggered delays for children */
+  .scroll-reveal.delay-100 {
+    transition-delay: 100ms;
+  }
+  .scroll-reveal.delay-200 {
+    transition-delay: 200ms;
+  }
+  .scroll-reveal.delay-300 {
+    transition-delay: 300ms;
+  }
+  .scroll-reveal.delay-400 {
+    transition-delay: 400ms;
+  }
+  .scroll-reveal.delay-500 {
+    transition-delay: 500ms;
+  }
+
+  /* Respect reduced motion preference */
+  @media (prefers-reduced-motion: reduce) {
+    .scroll-reveal {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+  }
+
+  .animate-fadeIn {
+    animation: fadeIn 0.3s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      --from: 0deg;
+    }
+    to {
+      --from: 360deg;
+    }
+  }
+
+  /* Interactive hover effects */
+  .hover-lift {
+    @apply transition-all duration-300;
+  }
+
+  .hover-lift:hover {
+    @apply -translate-y-1 shadow-lg;
+  }
+
+  .hover-glow {
+    @apply transition-all duration-300;
+  }
+
+  .hover-glow:hover {
+    box-shadow: 0 0 20px rgba(66, 80, 235, 0.3);
+  }
+
+  /* Shimmer effect for loading states */
+  .animate-shimmer {
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(255, 255, 255, 0.1) 50%,
+      transparent 100%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+  }
+
+  @keyframes shimmer {
+    0% {
+      background-position: -200% 0;
+    }
+    100% {
+      background-position: 200% 0;
+    }
+  }
+
+  /* Subtle bounce animation */
+  .animate-bounce-subtle {
+    animation: bounceSubtle 2s ease-in-out infinite;
+  }
+
+  @keyframes bounceSubtle {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-5px);
+    }
+  }
+
+  /* Pulse scale animation */
+  .animate-pulse-scale {
+    animation: pulseScale 2s ease-in-out infinite;
+  }
+
+  @keyframes pulseScale {
+    0%,
+    100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.02);
+    }
+  }
+
+  @keyframes slide {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+
+  .animate-slide {
+    animation: slide 50s linear infinite;
+  }
+
+  .animate-slide:hover {
+    animation-play-state: paused;
+  }
+
+  .animate-float-1 {
+    animation: float1 6s ease-in-out infinite;
+  }
+  
+  .animate-float-2 {
+    animation: float2 6s ease-in-out infinite 1s;
+  }
+  
+  .animate-float-3 {
+    animation: float3 6s ease-in-out infinite 2s;
+  }
+  
+  @keyframes float1 {
+    0%,
+    100% {
+      transform: translate(0, 0);
+    }
+    25% {
+      transform: translate(0, -12px);
+    }
+    50% {
+      transform: translate(0, -8px);
+    }
+    75% {
+      transform: translate(0, -15px);
+    }
+  }
+  
+  @keyframes float2 {
+    0%,
+    100% {
+      transform: translate(0, 0);
+    }
+    25% {
+      transform: translate(0, -8px);
+    }
+    50% {
+      transform: translate(0, -18px);
+    }
+    75% {
+      transform: translate(0, -5px);
+    }
+  }
+  
+  @keyframes float3 {
+    0%,
+    100% {
+      transform: translate(0, 0);
+    }
+    25% {
+      transform: translate(0, -20px);
+    }
+    50% {
+      transform: translate(0, -10px);
+    }
+    75% {
+      transform: translate(0, -6px);
+    }
+  }
+}
+
+@layer components {
+  /* Custom prose styles for markdown content */
+  .prose h2 {
+    @apply text-xl font-clash font-semibold text-primary mb-4 mt-8;
+  }
+  
+  .prose h3 {
+    @apply text-lg font-clash font-medium text-neutral-800 dark:text-neutral-200 mb-3 mt-6;
+  }
+  
+  .prose p {
+    @apply text-neutral-600 dark:text-neutral-400 mb-4 leading-relaxed;
+  }
+  
+  .prose strong {
+    @apply font-semibold text-neutral-800 dark:text-neutral-200;
+  }
+  
+  .prose ul {
+    @apply space-y-2 mb-6;
+  }
+  
+  .prose ul li {
+    @apply text-neutral-600 dark:text-neutral-400 relative pl-0;
+  }
+  
+  .prose ul li::before {
+    content: "•";
+    @apply text-primary font-bold absolute -left-4;
+  }
+  
+  .prose ol {
+    @apply space-y-2 mb-6;
+  }
+  
+  .prose ol li {
+    @apply text-neutral-600 dark:text-neutral-400;
+  }
+  
+  .prose a {
+    @apply text-primary hover:text-primary/80 font-medium no-underline;
+  }
+  
+  .prose code {
+    @apply bg-neutral-100 dark:bg-neutral-800 text-neutral-800 dark:text-neutral-200 px-1 py-0.5 rounded text-sm;
+  }
+  
+  .prose blockquote {
+    @apply border-l-4 border-primary/30 bg-neutral-50 dark:bg-neutral-800/50 p-4 rounded-r-lg italic;
+  }
+  
+  /* Ensure proper spacing and sizing */
+  .prose {
+    @apply text-base;
+  }
+}
+
+/* RTL Support */
+[dir="rtl"] {
+  direction: rtl;
+  text-align: right;
+}
+
+/* RTL-specific adjustments */
+[dir="rtl"] .animate-slide {
+  animation: slide-rtl 50s linear infinite;
+}
+
+@keyframes slide-rtl {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(50%);
+  }
+}
+
+/* Flip margins and paddings for RTL */
+[dir="rtl"] .prose ul li::before {
+  @apply -right-4 left-auto;
+}
+
+[dir="rtl"] .prose blockquote {
+  @apply border-l-0 border-r-4 rounded-l-lg rounded-r-none;
+}
+
+/* Fix flex direction for RTL */
+[dir="rtl"] .flex-row {
+  flex-direction: row-reverse;
+}
+
+/* Ensure text alignment for RTL */
+[dir="rtl"] body {
+  text-align: right;
+}
+
+[dir="rtl"] input,
+[dir="rtl"] textarea,
+[dir="rtl"] select {
+  text-align: right;
+}
