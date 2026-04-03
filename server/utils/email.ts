@@ -24,47 +24,50 @@ export async function sendPrizeEmail({ email, prize, code, gdprConsent }: SendPr
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
 body{margin:0;padding:0;font-family:'Inter',-apple-system,sans-serif;background:#000;}
-.wrap{width:100%;background:#0a0a0a;padding:20px 0;}.ctr{max-width:600px;margin:0 auto;background:#0a0a0a;border:1px solid #D4AF37;border-radius:4px;overflow:hidden;}
+.wrap{width:100%;background:#0a0a0a;padding:20px 0;}.ctr{max-width:600px;margin:0 auto;background:#0a0a0a;border:1px solid #4250EB;border-radius:4px;overflow:hidden;}
 @media screen and (max-width:600px){.mob-pad{padding-left:24px!important;padding-right:24px!important;}}
 </style></head><body>
 <div class="wrap"><div class="ctr">
   <!-- Logo bar -->
-  <div style="border-bottom:1px solid rgba(212,175,55,0.3);padding:24px 48px;text-align:center;" class="mob-pad">
+  <div style="border-bottom:1px solid rgba(66,80,235,0.3);padding:24px 48px;text-align:center;" class="mob-pad">
     <a href="https://tradersyard.com"><img src="https://iili.io/fyq9H0X.png" alt="TY" width="40" height="40" style="display:inline-block;border:0;"></a>
   </div>
   <!-- Hero -->
-  <div class="mob-pad" style="padding:40px 48px 24px;text-align:center;">
-    <div style="font-size:11px;font-weight:600;color:#D4AF37;text-transform:uppercase;letter-spacing:3px;margin-bottom:16px;">&#9830; Easter 2026 · Hatch a Chance &#9830;</div>
+  <div class="mob-pad" style="padding:40px 48px 16px;text-align:center;">
+    <div style="font-size:11px;font-weight:600;color:#4250EB;text-transform:uppercase;letter-spacing:3px;margin-bottom:16px;">&#9830; Easter 2026 · Hatch a Chance &#9830;</div>
     <h1 style="font-family:'Cormorant Garamond',Georgia,serif;font-size:44px;font-weight:600;color:#fff;line-height:1.1;letter-spacing:-1px;">Your egg is hatched,<br>${displayName}.</h1>
-    <div style="width:60px;height:1px;background:linear-gradient(90deg,transparent,#D4AF37,transparent);margin:20px auto;"></div>
-    <p style="font-size:14px;color:#71717a;line-height:1.6;">Here's what you won:</p>
+    <div style="width:60px;height:1px;background:linear-gradient(90deg,transparent,#4250EB,transparent);margin:20px auto;"></div>
   </div>
-  <!-- Bunny/egg image -->
+  <!-- Egg image — before "Here's what you won" -->
   <div class="mob-pad" style="padding:0 48px 8px;text-align:center;">
-    <img src="https://iili.io/fyq9H0X.png" alt="🐣" width="80" height="80" style="display:inline-block;border:0;border-radius:50%;background:rgba(212,175,55,0.1);padding:12px;">
+    <img src="https://iili.io/fyq9H0X.png" alt="🐣" width="80" height="80" style="display:inline-block;border:0;border-radius:50%;background:rgba(66,80,235,0.1);padding:12px;">
+  </div>
+  <!-- "Here's what you won" -->
+  <div class="mob-pad" style="padding:0 48px 16px;text-align:center;">
+    <p style="font-size:14px;color:#a1a1aa;line-height:1.6;">Here's what you won:</p>
   </div>
   <!-- Prize card -->
   <div class="mob-pad" style="padding:0 48px 24px;">
-    <div style="border:1px solid rgba(212,175,55,0.35);border-radius:12px;padding:32px 28px;text-align:center;background:linear-gradient(180deg,rgba(212,175,55,0.08) 0%,transparent 100%);">
+    <div style="border:1px solid rgba(66,80,235,0.35);border-radius:12px;padding:32px 28px;text-align:center;background:linear-gradient(180deg,rgba(66,80,235,0.08) 0%,transparent 100%);">
       <h2 style="font-family:'Cormorant Garamond',Georgia,serif;font-size:28px;font-weight:600;color:#fff;line-height:1.25;margin-bottom:24px;">${prize.display_text}</h2>
-      <div style="font-size:11px;font-weight:600;color:#71717a;text-transform:uppercase;letter-spacing:2px;margin-bottom:10px;">Your Code</div>
-      <div style="display:inline-block;border:1px solid rgba(212,175,55,0.5);border-radius:6px;padding:12px 32px;background:rgba(212,175,55,0.06);">
-        <span style="font-family:'Courier New',monospace;font-size:24px;font-weight:700;color:#D4AF37;letter-spacing:4px;">${code}</span>
+      <div style="font-size:11px;font-weight:600;color:#a1a1aa;text-transform:uppercase;letter-spacing:2px;margin-bottom:10px;">Your Code</div>
+      <div style="display:inline-block;border:1px solid rgba(66,80,235,0.5);border-radius:6px;padding:12px 32px;background:rgba(66,80,235,0.06);">
+        <span style="font-family:'Courier New',monospace;font-size:24px;font-weight:700;color:#fff;letter-spacing:4px;">${code}</span>
       </div>
       <p style="font-size:12px;color:#52525b;margin-top:14px;">This code expires in 24 hours — use it today.</p>
     </div>
   </div>
   <!-- CTA -->
   <div class="mob-pad" style="padding:8px 48px 32px;text-align:center;">
-    <a href="https://app.tradersyard.com/challenges" style="display:inline-block;background:#D4AF37;color:#0a0a0a;text-decoration:none;padding:16px 44px;border-radius:4px;font-size:15px;font-weight:600;letter-spacing:0.5px;">Redeem Now →</a>
+    <a href="https://app.tradersyard.com/challenges" style="display:inline-block;background:#eab308;color:#0a0a0a;text-decoration:none;padding:16px 44px;border-radius:4px;font-size:15px;font-weight:600;letter-spacing:0.5px;">Redeem Now →</a>
   </div>
   <!-- Sign-off -->
   <div class="mob-pad" style="padding:0 48px 28px;text-align:center;">
-    <p style="font-size:13px;color:#71717a;">Good luck out there. The Yard is rooting for you.</p>
-    <p style="font-size:13px;color:#71717a;margin-top:6px;">— The TradersYard Team</p>
+    <p style="font-size:13px;color:#a1a1aa;">Good luck out there. The Yard is rooting for you.</p>
+    <p style="font-size:13px;color:#a1a1aa;margin-top:6px;">— The TradersYard Team</p>
   </div>
   <!-- Footer -->
-  <div style="border-top:1px solid rgba(212,175,55,0.2);padding:24px 40px;text-align:center;">
+  <div style="border-top:1px solid rgba(66,80,235,0.2);padding:24px 40px;text-align:center;">
     <div style="text-align:center;margin-bottom:16px;">
       <a href="https://discord.gg/tradersyard" target="_blank" style="text-decoration:none;display:inline-block;margin:0 6px;"><img src="https://iili.io/fyqBZog.png" width="24" height="24" alt="Discord" style="display:block;"></a>
       <a href="https://www.instagram.com/tradersyard/" target="_blank" style="text-decoration:none;display:inline-block;margin:0 6px;"><img src="https://fwtzypc.stripocdn.email/content/assets/img/social-icons/logo-white/instagram-logo-white.png" width="24" height="24" alt="Instagram" style="display:block;"></a>
@@ -115,26 +118,32 @@ export async function sendReferralCreditEmail(referrerEmail: string) {
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Your Second Crack is Ready</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<style>*{margin:0;padding:0;box-sizing:border-box;}body{margin:0;padding:0;font-family:'Inter',-apple-system,sans-serif;background:#000;}.wrap{width:100%;background:#0a0a0a;padding:20px 0;}.ctr{max-width:600px;margin:0 auto;background:#0a0a0a;border:1px solid #D4AF37;border-radius:4px;overflow:hidden;}@media screen and (max-width:600px){.mob-pad{padding-left:24px!important;padding-right:24px!important;}}</style></head><body>
+<style>*{margin:0;padding:0;box-sizing:border-box;}body{margin:0;padding:0;font-family:'Inter',-apple-system,sans-serif;background:#000;}.wrap{width:100%;background:#0a0a0a;padding:20px 0;}.ctr{max-width:600px;margin:0 auto;background:#0a0a0a;border:1px solid #4250EB;border-radius:4px;overflow:hidden;}@media screen and (max-width:600px){.mob-pad{padding-left:24px!important;padding-right:24px!important;}}</style></head><body>
 <div class="wrap"><div class="ctr">
-  <div style="border-bottom:1px solid rgba(212,175,55,0.3);padding:24px 48px;text-align:center;" class="mob-pad">
+  <div style="border-bottom:1px solid rgba(66,80,235,0.3);padding:24px 48px;text-align:center;" class="mob-pad">
     <a href="https://tradersyard.com"><img src="https://iili.io/fyq9H0X.png" alt="TY" width="40" height="40" style="display:inline-block;border:0;"></a>
   </div>
-  <div class="mob-pad" style="padding:40px 48px 24px;text-align:center;">
-    <div style="font-size:11px;font-weight:600;color:#D4AF37;text-transform:uppercase;letter-spacing:3px;margin-bottom:16px;">&#9830; Easter 2026 · Hatch a Chance &#9830;</div>
+  <div class="mob-pad" style="padding:40px 48px 16px;text-align:center;">
+    <div style="font-size:11px;font-weight:600;color:#4250EB;text-transform:uppercase;letter-spacing:3px;margin-bottom:16px;">&#9830; Easter 2026 · Hatch a Chance &#9830;</div>
     <h1 style="font-family:'Cormorant Garamond',Georgia,serif;font-size:40px;font-weight:600;color:#fff;line-height:1.15;letter-spacing:-1px;">Your friend cracked their egg, ${displayName}.</h1>
-    <div style="width:60px;height:1px;background:linear-gradient(90deg,transparent,#D4AF37,transparent);margin:20px auto;"></div>
-    <p style="font-size:15px;color:#71717a;line-height:1.7;max-width:420px;margin:0 auto;">
-      Someone you referred just cracked their Easter egg — which means you've earned a <strong style="color:#D4AF37;">second crack</strong>. Head back to the page, enter your email, and crack another one.
+    <div style="width:60px;height:1px;background:linear-gradient(90deg,transparent,#4250EB,transparent);margin:20px auto;"></div>
+  </div>
+  <!-- Egg image -->
+  <div class="mob-pad" style="padding:0 48px 16px;text-align:center;">
+    <img src="https://iili.io/fyq9H0X.png" alt="🐣" width="64" height="64" style="display:inline-block;border:0;border-radius:50%;background:rgba(66,80,235,0.1);padding:10px;">
+  </div>
+  <div class="mob-pad" style="padding:0 48px 16px;text-align:center;">
+    <p style="font-size:15px;color:#a1a1aa;line-height:1.7;max-width:420px;margin:0 auto;">
+      Someone you referred just cracked their Easter egg — which means you've earned a <strong style="color:#fff;">second crack</strong>. Head back to the page, enter your email, and crack another one.
     </p>
   </div>
   <div class="mob-pad" style="padding:8px 48px 36px;text-align:center;">
-    <a href="https://tradersyard.com/easter" style="display:inline-block;background:#D4AF37;color:#0a0a0a;text-decoration:none;padding:16px 44px;border-radius:4px;font-size:15px;font-weight:600;letter-spacing:0.5px;">Claim My Second Crack →</a>
+    <a href="https://tradersyard.com/easter" style="display:inline-block;background:#eab308;color:#0a0a0a;text-decoration:none;padding:16px 44px;border-radius:4px;font-size:15px;font-weight:600;letter-spacing:0.5px;">Claim My Second Crack →</a>
   </div>
   <div class="mob-pad" style="padding:0 48px 28px;text-align:center;">
-    <p style="font-size:13px;color:#71717a;">— The TradersYard Team</p>
+    <p style="font-size:13px;color:#a1a1aa;">— The TradersYard Team</p>
   </div>
-  <div style="border-top:1px solid rgba(212,175,55,0.2);padding:24px 40px;text-align:center;">
+  <div style="border-top:1px solid rgba(66,80,235,0.2);padding:24px 40px;text-align:center;">
     <p style="font-size:9px;color:#52525b;">&copy; 2026 TradersYard GmbH &nbsp;&middot;&nbsp; <a href="https://tradersyard.com" style="color:#52525b;text-decoration:underline;">tradersyard.com</a></p>
   </div>
 </div></div></body></html>`
