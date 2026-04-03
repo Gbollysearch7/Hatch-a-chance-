@@ -18,75 +18,179 @@ export async function sendPrizeEmail({ email, prize, code, gdprConsent }: SendPr
   const displayName = firstName.charAt(0).toUpperCase() + firstName.slice(1)
 
   const html = `<!DOCTYPE html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="format-detection" content="telephone=no,address=no,email=no,date=no">
-<title>Your Easter Prize</title>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Your Easter Prize — TradersYard</title>
 <style>
-*{margin:0;padding:0;box-sizing:border-box;}
-body{margin:0;padding:0;font-family:'Inter',-apple-system,sans-serif;background:#000;}
-.wrap{width:100%;background:#0a0a0a;padding:20px 0;}.ctr{max-width:600px;margin:0 auto;background:#0a0a0a;border:1px solid #4250EB;border-radius:4px;overflow:hidden;}
-@media screen and (max-width:600px){.mob-pad{padding-left:24px!important;padding-right:24px!important;}}
-</style></head><body>
-<div class="wrap"><div class="ctr">
-  <!-- Logo bar -->
-  <div style="border-bottom:1px solid rgba(66,80,235,0.3);padding:24px 48px;text-align:center;" class="mob-pad">
-    <a href="https://tradersyard.com"><img src="https://iili.io/fyq9H0X.png" alt="TY" width="40" height="40" style="display:inline-block;border:0;"></a>
-  </div>
-  <!-- Hero -->
-  <div class="mob-pad" style="padding:40px 48px 16px;text-align:center;">
-    <div style="font-size:11px;font-weight:600;color:#4250EB;text-transform:uppercase;letter-spacing:3px;margin-bottom:16px;">&#9830; Easter 2026 · Hatch a Chance &#9830;</div>
-    <h1 style="font-family:'Cormorant Garamond',Georgia,serif;font-size:44px;font-weight:600;color:#fff;line-height:1.1;letter-spacing:-1px;">Your egg is hatched,<br>${displayName}.</h1>
-    <div style="width:60px;height:1px;background:linear-gradient(90deg,transparent,#4250EB,transparent);margin:20px auto;"></div>
-  </div>
-  <!-- Egg image — before "Here's what you won" -->
-  <div class="mob-pad" style="padding:0 48px 8px;text-align:center;">
-    <img src="https://iili.io/fyq9H0X.png" alt="🐣" width="80" height="80" style="display:inline-block;border:0;border-radius:50%;background:rgba(66,80,235,0.1);padding:12px;">
-  </div>
-  <!-- "Here's what you won" -->
-  <div class="mob-pad" style="padding:0 48px 16px;text-align:center;">
-    <p style="font-size:14px;color:#a1a1aa;line-height:1.6;">Here's what you won:</p>
-  </div>
-  <!-- Prize card -->
-  <div class="mob-pad" style="padding:0 48px 24px;">
-    <div style="border:1px solid rgba(66,80,235,0.35);border-radius:12px;padding:32px 28px;text-align:center;background:linear-gradient(180deg,rgba(66,80,235,0.08) 0%,transparent 100%);">
-      <h2 style="font-family:'Cormorant Garamond',Georgia,serif;font-size:28px;font-weight:600;color:#fff;line-height:1.25;margin-bottom:24px;">${prize.display_text}</h2>
-      <div style="font-size:11px;font-weight:600;color:#a1a1aa;text-transform:uppercase;letter-spacing:2px;margin-bottom:10px;">Your Code</div>
-      <div style="display:inline-block;border:1px solid rgba(66,80,235,0.5);border-radius:6px;padding:12px 32px;background:rgba(66,80,235,0.06);">
-        <span style="font-family:'Courier New',monospace;font-size:24px;font-weight:700;color:#fff;letter-spacing:4px;">${code}</span>
-      </div>
-      <p style="font-size:12px;color:#52525b;margin-top:14px;">This code expires in 24 hours — use it today.</p>
-    </div>
-  </div>
-  <!-- CTA -->
-  <div class="mob-pad" style="padding:8px 48px 32px;text-align:center;">
-    <a href="https://app.tradersyard.com/challenges" style="display:inline-block;background:#eab308;color:#0a0a0a;text-decoration:none;padding:16px 44px;border-radius:4px;font-size:15px;font-weight:600;letter-spacing:0.5px;">Redeem Now →</a>
-  </div>
-  <!-- Sign-off -->
-  <div class="mob-pad" style="padding:0 48px 28px;text-align:center;">
-    <p style="font-size:13px;color:#a1a1aa;">Good luck out there. The Yard is rooting for you.</p>
-    <p style="font-size:13px;color:#a1a1aa;margin-top:6px;">— The TradersYard Team</p>
-  </div>
-  <!-- Footer -->
-  <div style="border-top:1px solid rgba(66,80,235,0.2);padding:24px 40px;text-align:center;">
-    <div style="text-align:center;margin-bottom:16px;">
-      <a href="https://discord.gg/tradersyard" target="_blank" style="text-decoration:none;display:inline-block;margin:0 6px;"><img src="https://iili.io/fyqBZog.png" width="24" height="24" alt="Discord" style="display:block;"></a>
-      <a href="https://www.instagram.com/tradersyard/" target="_blank" style="text-decoration:none;display:inline-block;margin:0 6px;"><img src="https://fwtzypc.stripocdn.email/content/assets/img/social-icons/logo-white/instagram-logo-white.png" width="24" height="24" alt="Instagram" style="display:block;"></a>
-      <a href="https://www.youtube.com/@TradersYard" target="_blank" style="text-decoration:none;display:inline-block;margin:0 6px;"><img src="https://fwtzypc.stripocdn.email/content/assets/img/social-icons/logo-white/youtube-logo-white.png" width="24" height="24" alt="YouTube" style="display:block;"></a>
-      <a href="https://www.tiktok.com/@tradersyard" target="_blank" style="text-decoration:none;display:inline-block;margin:0 6px;"><img src="https://fwtzypc.stripocdn.email/content/assets/img/social-icons/logo-white/tiktok-logo-white.png" width="24" height="24" alt="TikTok" style="display:block;"></a>
-      <a href="https://x.com/TradersYard" target="_blank" style="text-decoration:none;display:inline-block;margin:0 6px;"><img src="https://fwtzypc.stripocdn.email/content/assets/img/social-icons/logo-white/x-logo-white.png" width="24" height="24" alt="X" style="display:block;"></a>
-    </div>
-    <p style="font-size:9px;color:#52525b;line-height:1.7;margin-top:8px;"><strong>DISCLAIMER:</strong> Trading financial instruments, including simulated trading activities in a demo environment offered by <strong>TradersYard GmbH</strong>, involves a substantial risk of loss and is not suitable for all individuals. The valuation of financial instruments may be highly volatile. Participants may experience gains or losses greater than their initial demo trade order.</p>
-    <p style="font-size:9px;color:#52525b;line-height:1.7;margin-top:8px;"><strong>TradersYard GmbH does not provide trading or investment advice.</strong> Any trading or investment decisions you make are solely your responsibility and at your own risk. Past performance is not indicative of future results.</p>
-    <p style="font-size:9px;color:#52525b;margin-top:12px;">&copy; 2026 TradersYard GmbH &nbsp;&middot;&nbsp; <a href="https://tradersyard.com" style="color:#52525b;text-decoration:underline;">tradersyard.com</a> &nbsp;&middot;&nbsp; <a href="https://tradersyard.com/unsubscribe?email=${encodeURIComponent(email)}" style="color:#52525b;text-decoration:underline;">Unsubscribe</a></p>
-  </div>
-</div></div></body></html>`
-
-  const payload = {
-    from: config.resendFromEmail,
-    to: email,
-    subject: `Your Easter prize is here, ${displayName} 🥚`,
-    html,
+  body,table,td,p,a,li{-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}
+  table,td{mso-table-lspace:0pt;mso-table-rspace:0pt;}
+  img{-ms-interpolation-mode:bicubic;border:0;line-height:100%;outline:none;text-decoration:none;}
+  body{margin:0!important;padding:0!important;width:100%!important;}
+  a[x-apple-data-detectors]{color:inherit!important;text-decoration:none!important;}
+  u+#body a{color:inherit;text-decoration:none;}
+  @media screen and (max-width:620px){
+    .email-container{width:100%!important;}
+    .mobile-pad{padding-left:24px!important;padding-right:24px!important;}
+    .hero-hl{font-size:28px!important;line-height:1.25!important;}
+    .prize-num{font-size:52px!important;}
   }
+</style>
+</head>
+<body id="body">
+
+  <!-- Preheader -->
+  <div style="display:none;max-height:0;overflow:hidden;">Your egg is hatched, ${displayName}. Here's what you won.</div>
+  <div style="display:none;max-height:0;overflow:hidden;">&nbsp;&#8204;&nbsp;&#8204;&nbsp;&#8204;&nbsp;&#8204;&nbsp;&#8204;&nbsp;&#8204;&nbsp;&#8204;&nbsp;&#8204;&nbsp;&#8204;&nbsp;&#8204;&nbsp;&#8204;&nbsp;&#8204;</div>
+
+  <!-- Wrapper -->
+  <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="background-color:#f0f1ff;">
+  <tr><td align="center" style="padding:32px 16px 48px;">
+
+    <!-- Container -->
+    <table class="email-container" role="presentation" cellpadding="0" cellspacing="0" border="0" width="600" style="max-width:600px;width:100%;background-color:#ffffff;">
+
+      <!-- Hero -->
+      <tr>
+        <td style="background-color:#4250eb;padding:40px 48px 44px;" class="mobile-pad">
+          <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
+            <tr>
+              <td valign="middle">
+                <a href="https://tradersyard.com" target="_blank" style="text-decoration:none;">
+                  <img src="https://iili.io/fyq9H0X.png" alt="TradersYard" width="36" height="36" style="display:block;width:36px;height:36px;border:0;filter:brightness(0) invert(1);">
+                </a>
+              </td>
+              <td align="right" valign="middle">
+                <span style="font-family:Verdana,Geneva,sans-serif;font-size:10px;font-weight:700;color:rgba(255,255,255,0.55);text-transform:uppercase;letter-spacing:3px;">Easter 2026</span>
+              </td>
+            </tr>
+          </table>
+          <h1 class="hero-hl" style="margin:36px 0 16px;font-family:Verdana,Geneva,sans-serif;font-size:34px;font-weight:700;color:#ffffff;line-height:1.2;letter-spacing:-0.5px;">Your egg is hatched,<br>${displayName}.</h1>
+          <p style="margin:0;font-family:Verdana,Geneva,sans-serif;font-size:15px;color:rgba(255,255,255,0.75);line-height:1.7;">You cracked your egg and won a real prize. Here's what's inside.</p>
+        </td>
+      </tr>
+
+      <!-- Egg + "Here's what you won" -->
+      <tr>
+        <td align="center" style="padding:36px 48px 0;" class="mobile-pad">
+          <p style="margin:0 0 6px;font-family:Verdana,Geneva,sans-serif;font-size:32px;line-height:1;">&#x1F423;</p>
+          <p style="margin:0;font-family:Verdana,Geneva,sans-serif;font-size:11px;font-weight:700;color:#86868b;text-transform:uppercase;letter-spacing:3px;">Here's what you won</p>
+        </td>
+      </tr>
+
+      <!-- Prize card -->
+      <tr>
+        <td style="padding:20px 48px 0;" class="mobile-pad">
+          <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
+            <tr>
+              <td style="background-color:#f0f1ff;border:2px solid #4250eb;border-radius:4px;padding:32px 28px;text-align:center;">
+                <p style="margin:0 0 12px;font-family:Verdana,Geneva,sans-serif;font-size:20px;font-weight:700;color:#1d1d1f;line-height:1.3;">${prize.display_text}</p>
+                <p style="margin:0 0 16px;font-family:Verdana,Geneva,sans-serif;font-size:11px;font-weight:700;color:#86868b;text-transform:uppercase;letter-spacing:3px;">Your Code</p>
+                <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin:0 auto;">
+                  <tr>
+                    <td style="border:2px solid #4250eb;padding:12px 28px;border-radius:3px;background-color:#ffffff;">
+                      <span style="font-family:'Courier New',Courier,monospace;font-size:22px;font-weight:700;color:#4250eb;letter-spacing:4px;">${code}</span>
+                    </td>
+                  </tr>
+                </table>
+                <p style="margin:12px 0 0;font-family:Verdana,Geneva,sans-serif;font-size:11px;color:#86868b;">This code expires in 24 hours &mdash; use it today.</p>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+
+      <!-- CTA -->
+      <tr>
+        <td align="center" style="padding:28px 48px 12px;" class="mobile-pad">
+          <table role="presentation" cellpadding="0" cellspacing="0" border="0">
+            <tr>
+              <td align="center" bgcolor="#eab308" style="border-radius:6px;">
+                <a href="https://app.tradersyard.com/challenges" target="_blank" style="display:inline-block;padding:16px 48px;font-family:Verdana,Geneva,sans-serif;font-size:16px;font-weight:700;color:#000000;text-decoration:none;border-radius:6px;background-color:#eab308;">Redeem Now &rarr;</a>
+              </td>
+            </tr>
+          </table>
+          <p style="margin:10px 0 0;font-family:Verdana,Geneva,sans-serif;font-size:11px;color:#86868b;">Code also sent to <strong style="color:#1d1d1f;">${email}</strong> &#10003;</p>
+        </td>
+      </tr>
+
+      <!-- Divider -->
+      <tr>
+        <td style="padding:0 48px;">
+          <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
+            <tr><td style="border-top:1px solid #f0f1ff;font-size:0;line-height:0;">&nbsp;</td></tr>
+          </table>
+        </td>
+      </tr>
+
+      <!-- Sign-off -->
+      <tr>
+        <td style="padding:28px 48px 32px;" class="mobile-pad">
+          <p style="margin:0;font-family:Verdana,Geneva,sans-serif;font-size:14px;color:#86868b;line-height:1.7;">Good luck out there,</p>
+          <p style="margin:4px 0 0;font-family:Verdana,Geneva,sans-serif;font-size:14px;font-weight:700;color:#1d1d1f;">The TradersYard Team</p>
+        </td>
+      </tr>
+
+      <!-- Footer -->
+      <tr>
+        <td style="background-color:#1d1d1f;padding:32px 48px 24px;" class="mobile-pad">
+          <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
+            <tr>
+              <td align="center" style="padding-bottom:20px;">
+                <a href="https://tradersyard.com" target="_blank">
+                  <img src="https://iili.io/fyq9H0X.png" alt="TradersYard" width="28" height="28" style="display:block;width:28px;height:28px;border:0;margin:0 auto;filter:brightness(0) invert(1);">
+                </a>
+              </td>
+            </tr>
+          </table>
+          <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
+            <tr>
+              <td align="center" style="padding-bottom:20px;">
+                <table role="presentation" cellpadding="0" cellspacing="0" border="0">
+                  <tr>
+                    <td style="padding:0 6px;"><a href="https://discord.gg/tradersyard" target="_blank"><img src="https://iili.io/fyqBZog.png" width="22" height="22" alt="Discord" style="display:block;border:0;"></a></td>
+                    <td style="padding:0 6px;"><a href="https://www.instagram.com/tradersyard/" target="_blank"><img src="https://fwtzypc.stripocdn.email/content/assets/img/social-icons/logo-white/instagram-logo-white.png" width="22" height="22" alt="Instagram" style="display:block;border:0;"></a></td>
+                    <td style="padding:0 6px;"><a href="https://www.youtube.com/@TradersYard" target="_blank"><img src="https://fwtzypc.stripocdn.email/content/assets/img/social-icons/logo-white/youtube-logo-white.png" width="22" height="22" alt="YouTube" style="display:block;border:0;"></a></td>
+                    <td style="padding:0 6px;"><a href="https://www.tiktok.com/@tradersyard" target="_blank"><img src="https://fwtzypc.stripocdn.email/content/assets/img/social-icons/logo-white/tiktok-logo-white.png" width="22" height="22" alt="TikTok" style="display:block;border:0;"></a></td>
+                    <td style="padding:0 6px;"><a href="https://x.com/TradersYard" target="_blank"><img src="https://fwtzypc.stripocdn.email/content/assets/img/social-icons/logo-white/x-logo-white.png" width="22" height="22" alt="X" style="display:block;border:0;"></a></td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+          <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
+            <tr>
+              <td align="center" style="padding-bottom:20px;">
+                <a href="https://tradersyard.com/profile" target="_blank" style="font-family:Verdana,Geneva,sans-serif;font-size:11px;color:rgba(255,255,255,0.5);text-decoration:none;">Profile</a>
+                <span style="font-family:Verdana,Geneva,sans-serif;font-size:11px;color:rgba(255,255,255,0.2);padding:0 10px;">|</span>
+                <a href="https://tradersyard.com/support" target="_blank" style="font-family:Verdana,Geneva,sans-serif;font-size:11px;color:rgba(255,255,255,0.5);text-decoration:none;">Contact</a>
+                <span style="font-family:Verdana,Geneva,sans-serif;font-size:11px;color:rgba(255,255,255,0.2);padding:0 10px;">|</span>
+                <a href="https://tradersyard.com/terms" target="_blank" style="font-family:Verdana,Geneva,sans-serif;font-size:11px;color:rgba(255,255,255,0.5);text-decoration:none;">Terms</a>
+                <span style="font-family:Verdana,Geneva,sans-serif;font-size:11px;color:rgba(255,255,255,0.2);padding:0 10px;">|</span>
+                <a href="https://tradersyard.com/unsubscribe?email=${encodeURIComponent(email)}" target="_blank" style="font-family:Verdana,Geneva,sans-serif;font-size:11px;color:rgba(255,255,255,0.5);text-decoration:none;">Unsubscribe</a>
+              </td>
+            </tr>
+          </table>
+          <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
+            <tr>
+              <td style="border-top:1px solid rgba(255,255,255,0.1);padding-top:20px;">
+                <p style="margin:0 0 12px;font-family:Verdana,Geneva,sans-serif;font-size:10px;color:rgba(255,255,255,0.3);line-height:1.7;"><strong style="color:rgba(255,255,255,0.45);">DISCLAIMER:</strong> Trading financial instruments, including simulated trading activities in a demo environment offered by <strong style="color:rgba(255,255,255,0.45);">TradersYard GmbH</strong>, involves a substantial risk of loss and is not suitable for all individuals. The valuation of financial instruments may be highly volatile. Participants may experience gains or losses greater than their initial demo trade order.</p>
+                <p style="margin:0 0 20px;font-family:Verdana,Geneva,sans-serif;font-size:10px;color:rgba(255,255,255,0.3);line-height:1.7;"><strong style="color:rgba(255,255,255,0.45);">TradersYard GmbH does not provide trading or investment advice.</strong> Any trading or investment decisions you make are solely your responsibility and at your own risk. Past performance is not indicative of future results.</p>
+                <p style="margin:0;font-family:Verdana,Geneva,sans-serif;font-size:10px;color:rgba(255,255,255,0.25);text-align:center;">&copy; 2026 TradersYard GmbH</p>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+
+    </table>
+  </td></tr>
+  </table>
+
+</body>
+</html>`
 
   const res = await fetch('https://api.resend.com/emails', {
     method: 'POST',
@@ -94,7 +198,12 @@ body{margin:0;padding:0;font-family:'Inter',-apple-system,sans-serif;background:
       'Content-Type': 'application/json',
       Authorization: `Bearer ${config.resendApiKey}`,
     },
-    body: JSON.stringify(payload),
+    body: JSON.stringify({
+      from: config.resendFromEmail,
+      to: email,
+      subject: `Your Easter prize is here, ${displayName} 🥚`,
+      html,
+    }),
   })
 
   if (!res.ok) {
@@ -115,38 +224,143 @@ export async function sendReferralCreditEmail(referrerEmail: string) {
   const displayName = firstName.charAt(0).toUpperCase() + firstName.slice(1)
 
   const html = `<!DOCTYPE html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Your Second Crack is Ready</title>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<style>*{margin:0;padding:0;box-sizing:border-box;}body{margin:0;padding:0;font-family:'Inter',-apple-system,sans-serif;background:#000;}.wrap{width:100%;background:#0a0a0a;padding:20px 0;}.ctr{max-width:600px;margin:0 auto;background:#0a0a0a;border:1px solid #4250EB;border-radius:4px;overflow:hidden;}@media screen and (max-width:600px){.mob-pad{padding-left:24px!important;padding-right:24px!important;}}</style></head><body>
-<div class="wrap"><div class="ctr">
-  <div style="border-bottom:1px solid rgba(66,80,235,0.3);padding:24px 48px;text-align:center;" class="mob-pad">
-    <a href="https://tradersyard.com"><img src="https://iili.io/fyq9H0X.png" alt="TY" width="40" height="40" style="display:inline-block;border:0;"></a>
-  </div>
-  <div class="mob-pad" style="padding:40px 48px 16px;text-align:center;">
-    <div style="font-size:11px;font-weight:600;color:#4250EB;text-transform:uppercase;letter-spacing:3px;margin-bottom:16px;">&#9830; Easter 2026 · Hatch a Chance &#9830;</div>
-    <h1 style="font-family:'Cormorant Garamond',Georgia,serif;font-size:40px;font-weight:600;color:#fff;line-height:1.15;letter-spacing:-1px;">Your friend cracked their egg, ${displayName}.</h1>
-    <div style="width:60px;height:1px;background:linear-gradient(90deg,transparent,#4250EB,transparent);margin:20px auto;"></div>
-  </div>
-  <!-- Egg image -->
-  <div class="mob-pad" style="padding:0 48px 16px;text-align:center;">
-    <img src="https://iili.io/fyq9H0X.png" alt="🐣" width="64" height="64" style="display:inline-block;border:0;border-radius:50%;background:rgba(66,80,235,0.1);padding:10px;">
-  </div>
-  <div class="mob-pad" style="padding:0 48px 16px;text-align:center;">
-    <p style="font-size:15px;color:#a1a1aa;line-height:1.7;max-width:420px;margin:0 auto;">
-      Someone you referred just cracked their Easter egg — which means you've earned a <strong style="color:#fff;">second crack</strong>. Head back to the page, enter your email, and crack another one.
-    </p>
-  </div>
-  <div class="mob-pad" style="padding:8px 48px 36px;text-align:center;">
-    <a href="https://tradersyard.com/easter" style="display:inline-block;background:#eab308;color:#0a0a0a;text-decoration:none;padding:16px 44px;border-radius:4px;font-size:15px;font-weight:600;letter-spacing:0.5px;">Claim My Second Crack →</a>
-  </div>
-  <div class="mob-pad" style="padding:0 48px 28px;text-align:center;">
-    <p style="font-size:13px;color:#a1a1aa;">— The TradersYard Team</p>
-  </div>
-  <div style="border-top:1px solid rgba(66,80,235,0.2);padding:24px 40px;text-align:center;">
-    <p style="font-size:9px;color:#52525b;">&copy; 2026 TradersYard GmbH &nbsp;&middot;&nbsp; <a href="https://tradersyard.com" style="color:#52525b;text-decoration:underline;">tradersyard.com</a></p>
-  </div>
-</div></div></body></html>`
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Your Second Crack is Ready — TradersYard</title>
+<style>
+  body,table,td,p,a,li{-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}
+  table,td{mso-table-lspace:0pt;mso-table-rspace:0pt;}
+  img{-ms-interpolation-mode:bicubic;border:0;line-height:100%;outline:none;text-decoration:none;}
+  body{margin:0!important;padding:0!important;width:100%!important;}
+  a[x-apple-data-detectors]{color:inherit!important;text-decoration:none!important;}
+  @media screen and (max-width:620px){
+    .email-container{width:100%!important;}
+    .mobile-pad{padding-left:24px!important;padding-right:24px!important;}
+    .hero-hl{font-size:26px!important;line-height:1.25!important;}
+  }
+</style>
+</head>
+<body id="body">
+
+  <div style="display:none;max-height:0;overflow:hidden;">Your friend cracked their egg — your second crack is waiting, ${displayName}.</div>
+  <div style="display:none;max-height:0;overflow:hidden;">&nbsp;&#8204;&nbsp;&#8204;&nbsp;&#8204;&nbsp;&#8204;&nbsp;&#8204;&nbsp;&#8204;&nbsp;&#8204;&nbsp;&#8204;&nbsp;&#8204;&nbsp;&#8204;</div>
+
+  <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="background-color:#f0f1ff;">
+  <tr><td align="center" style="padding:32px 16px 48px;">
+
+    <table class="email-container" role="presentation" cellpadding="0" cellspacing="0" border="0" width="600" style="max-width:600px;width:100%;background-color:#ffffff;">
+
+      <!-- Hero -->
+      <tr>
+        <td style="background-color:#4250eb;padding:40px 48px 44px;" class="mobile-pad">
+          <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
+            <tr>
+              <td valign="middle">
+                <a href="https://tradersyard.com" target="_blank" style="text-decoration:none;">
+                  <img src="https://iili.io/fyq9H0X.png" alt="TradersYard" width="36" height="36" style="display:block;width:36px;height:36px;border:0;filter:brightness(0) invert(1);">
+                </a>
+              </td>
+              <td align="right" valign="middle">
+                <span style="font-family:Verdana,Geneva,sans-serif;font-size:10px;font-weight:700;color:rgba(255,255,255,0.55);text-transform:uppercase;letter-spacing:3px;">Easter 2026</span>
+              </td>
+            </tr>
+          </table>
+          <h1 class="hero-hl" style="margin:36px 0 16px;font-family:Verdana,Geneva,sans-serif;font-size:34px;font-weight:700;color:#ffffff;line-height:1.2;letter-spacing:-0.5px;">Your friend cracked their egg,<br>${displayName}.</h1>
+          <p style="margin:0;font-family:Verdana,Geneva,sans-serif;font-size:15px;color:rgba(255,255,255,0.75);line-height:1.7;">That means you've earned a second crack — a completely fresh prize draw.</p>
+        </td>
+      </tr>
+
+      <!-- Egg -->
+      <tr>
+        <td align="center" style="padding:36px 48px 0;" class="mobile-pad">
+          <p style="margin:0 0 6px;font-family:Verdana,Geneva,sans-serif;font-size:32px;line-height:1;">&#x1F423;</p>
+        </td>
+      </tr>
+
+      <!-- Body copy -->
+      <tr>
+        <td style="padding:20px 48px 0;" class="mobile-pad">
+          <p style="margin:0;font-family:Verdana,Geneva,sans-serif;font-size:15px;color:#1d1d1f;line-height:1.7;">Someone you referred just cracked their Easter egg. Head back to the page, enter your email, and crack another one &mdash; your second draw is waiting.</p>
+        </td>
+      </tr>
+
+      <!-- CTA -->
+      <tr>
+        <td align="center" style="padding:28px 48px 12px;" class="mobile-pad">
+          <table role="presentation" cellpadding="0" cellspacing="0" border="0">
+            <tr>
+              <td align="center" bgcolor="#eab308" style="border-radius:6px;">
+                <a href="https://tradersyard.com/easter" target="_blank" style="display:inline-block;padding:16px 48px;font-family:Verdana,Geneva,sans-serif;font-size:16px;font-weight:700;color:#000000;text-decoration:none;border-radius:6px;background-color:#eab308;">Claim My Second Crack &rarr;</a>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+
+      <!-- Divider -->
+      <tr>
+        <td style="padding:0 48px;">
+          <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
+            <tr><td style="border-top:1px solid #f0f1ff;font-size:0;line-height:0;">&nbsp;</td></tr>
+          </table>
+        </td>
+      </tr>
+
+      <!-- Sign-off -->
+      <tr>
+        <td style="padding:28px 48px 32px;" class="mobile-pad">
+          <p style="margin:0;font-family:Verdana,Geneva,sans-serif;font-size:14px;color:#86868b;line-height:1.7;">See you in the Yard,</p>
+          <p style="margin:4px 0 0;font-family:Verdana,Geneva,sans-serif;font-size:14px;font-weight:700;color:#1d1d1f;">The TradersYard Team</p>
+        </td>
+      </tr>
+
+      <!-- Footer -->
+      <tr>
+        <td style="background-color:#1d1d1f;padding:32px 48px 24px;" class="mobile-pad">
+          <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
+            <tr>
+              <td align="center" style="padding-bottom:20px;">
+                <a href="https://tradersyard.com" target="_blank">
+                  <img src="https://iili.io/fyq9H0X.png" alt="TradersYard" width="28" height="28" style="display:block;width:28px;height:28px;border:0;margin:0 auto;filter:brightness(0) invert(1);">
+                </a>
+              </td>
+            </tr>
+          </table>
+          <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
+            <tr>
+              <td align="center" style="padding-bottom:20px;">
+                <table role="presentation" cellpadding="0" cellspacing="0" border="0">
+                  <tr>
+                    <td style="padding:0 6px;"><a href="https://discord.gg/tradersyard" target="_blank"><img src="https://iili.io/fyqBZog.png" width="22" height="22" alt="Discord" style="display:block;border:0;"></a></td>
+                    <td style="padding:0 6px;"><a href="https://www.instagram.com/tradersyard/" target="_blank"><img src="https://fwtzypc.stripocdn.email/content/assets/img/social-icons/logo-white/instagram-logo-white.png" width="22" height="22" alt="Instagram" style="display:block;border:0;"></a></td>
+                    <td style="padding:0 6px;"><a href="https://www.youtube.com/@TradersYard" target="_blank"><img src="https://fwtzypc.stripocdn.email/content/assets/img/social-icons/logo-white/youtube-logo-white.png" width="22" height="22" alt="YouTube" style="display:block;border:0;"></a></td>
+                    <td style="padding:0 6px;"><a href="https://www.tiktok.com/@tradersyard" target="_blank"><img src="https://fwtzypc.stripocdn.email/content/assets/img/social-icons/logo-white/tiktok-logo-white.png" width="22" height="22" alt="TikTok" style="display:block;border:0;"></a></td>
+                    <td style="padding:0 6px;"><a href="https://x.com/TradersYard" target="_blank"><img src="https://fwtzypc.stripocdn.email/content/assets/img/social-icons/logo-white/x-logo-white.png" width="22" height="22" alt="X" style="display:block;border:0;"></a></td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+          <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
+            <tr>
+              <td style="border-top:1px solid rgba(255,255,255,0.1);padding-top:20px;">
+                <p style="margin:0 0 20px;font-family:Verdana,Geneva,sans-serif;font-size:10px;color:rgba(255,255,255,0.3);line-height:1.7;"><strong style="color:rgba(255,255,255,0.45);">TradersYard GmbH does not provide trading or investment advice.</strong> Any trading or investment decisions you make are solely your responsibility and at your own risk. Past performance is not indicative of future results.</p>
+                <p style="margin:0;font-family:Verdana,Geneva,sans-serif;font-size:10px;color:rgba(255,255,255,0.25);text-align:center;">&copy; 2026 TradersYard GmbH</p>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+
+    </table>
+  </td></tr>
+  </table>
+
+</body>
+</html>`
 
   await fetch('https://api.resend.com/emails', {
     method: 'POST',
