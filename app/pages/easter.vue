@@ -339,61 +339,98 @@
     </section>
 
     <!-- ─── HOW IT WORKS ─── -->
-    <section class="py-16 bg-neutral-50 dark:bg-neutral-950 border-y border-neutral-100 dark:border-neutral-800">
+    <section class="py-16 bg-[#0B0B0B] border-y border-white/5">
       <Container>
         <div class="text-center mb-12">
-          <h2 class="font-clash text-3xl md:text-4xl font-semibold text-neutral-900 dark:text-white">How It Works</h2>
+          <h2 class="font-clash text-3xl md:text-4xl font-semibold text-white">How It Works</h2>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-3xl mx-auto">
           <div v-for="step in steps" :key="step.num" class="text-center space-y-4">
             <div class="w-14 h-14 bg-campaign rounded-2xl flex items-center justify-center mx-auto shadow-[0_4px_24px_rgba(234,179,8,0.35)]">
               <span class="font-clash text-2xl font-bold text-black">{{ step.num }}</span>
             </div>
-            <h3 class="font-clash text-base font-semibold text-neutral-900 dark:text-white">{{ step.title }}</h3>
-            <p class="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed">{{ step.desc }}</p>
+            <h3 class="font-clash text-base font-semibold text-white">{{ step.title }}</h3>
+            <p class="text-sm text-neutral-500 leading-relaxed">{{ step.desc }}</p>
           </div>
         </div>
       </Container>
     </section>
 
-    <!-- ─── WHAT'S IN THE POOL ─── -->
-    <section class="py-16">
+    <!-- ─── WIN UP TO — PERKS SHOWCASE ─── -->
+    <section class="py-20 bg-[#0B0B0B] border-t border-white/5">
       <Container>
-        <div class="text-center mb-10">
-          <h2 class="font-clash text-3xl md:text-4xl font-semibold text-neutral-900 dark:text-white mb-3">
-            What Could You Win?
+        <div class="text-center mb-14 reveal">
+          <div class="inline-flex items-center gap-2 bg-campaign/10 border border-campaign/30 rounded-full px-4 py-1.5 text-xs font-semibold tracking-widest uppercase text-campaign mb-5">
+            <IconSparkles class="size-3.5" /> The Prizes
+          </div>
+          <h2 class="font-clash text-4xl md:text-5xl font-semibold text-white mb-4 leading-tight">
+            Win Up To the Most<br class="hidden md:block" />
+            <span class="text-campaign"> Amazing Perks</span>
           </h2>
-          <p class="text-neutral-500 dark:text-neutral-400 max-w-md mx-auto text-sm">
-            Every prize pool is personalised. The floor is always higher than the public codes.
+          <p class="text-neutral-400 max-w-lg mx-auto text-base">
+            Every egg hides a real discount — auto-applied at checkout. The rarer your prize, the bigger your edge.
           </p>
         </div>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto">
-          <div v-for="p in prizePreviews" :key="p.label"
-            class="group bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded-2xl p-5 text-center hover:border-campaign/60 hover:shadow-[0_4px_24px_rgba(234,179,8,0.12)] transition-all duration-200 relative overflow-hidden">
-            <div class="absolute top-0 left-0 right-0 h-[3px] bg-campaign opacity-0 group-hover:opacity-100 transition-opacity duration-200 rounded-t-2xl" />
-            <div class="flex justify-center mb-3">
-              <IconRosetteDiscount v-if="p.icon === 'discount'" class="size-8 text-campaign" />
-              <IconRefresh v-else-if="p.icon === 'refresh'" class="size-8 text-campaign" />
-              <IconCreditCard v-else-if="p.icon === 'credit'" class="size-8 text-campaign" />
-              <IconStarFilled v-else class="size-8 text-campaign" />
+
+        <!-- Top jackpot feature card -->
+        <div class="max-w-3xl mx-auto mb-6 reveal">
+          <div class="relative rounded-3xl overflow-hidden border border-campaign/40 bg-gradient-to-br from-campaign/10 via-campaign/5 to-transparent p-8 md:p-10 flex flex-col md:flex-row items-center gap-8">
+            <!-- Glow -->
+            <div class="absolute inset-0 pointer-events-none">
+              <div class="absolute top-0 left-1/2 -translate-x-1/2 w-80 h-40 bg-campaign/15 blur-[60px] rounded-full" />
             </div>
-            <p class="font-clash text-sm font-semibold text-neutral-900 dark:text-white">{{ p.label }}</p>
-            <p class="text-xs text-neutral-400 mt-1">{{ p.sub }}</p>
+            <!-- Badge -->
+            <div class="flex-shrink-0 text-center md:text-left z-10">
+              <div class="inline-flex items-center gap-2 bg-campaign text-black text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-widest mb-4">
+                <IconTrophy class="size-3.5" /> Jackpot
+              </div>
+              <div class="font-clash text-6xl md:text-7xl font-semibold text-campaign leading-none mb-2">50%</div>
+              <div class="text-white font-clash text-xl font-semibold">Off Your Challenge</div>
+              <div class="text-neutral-400 text-sm mt-1">$5K or $10K 2-Phase account</div>
+            </div>
+            <!-- Divider -->
+            <div class="hidden md:block w-px h-28 bg-white/10 flex-shrink-0" />
+            <!-- Details -->
+            <div class="z-10 space-y-3 text-center md:text-left">
+              <p class="text-neutral-300 text-sm leading-relaxed">The rarest prize in the pool. A $10K 2-Phase challenge for just <strong class="text-campaign">$39.50</strong> — that's less than a takeaway.</p>
+              <div class="flex flex-wrap gap-2 justify-center md:justify-start">
+                <span class="text-xs bg-white/5 border border-white/10 rounded-full px-3 py-1 text-neutral-400">Single-use coupon</span>
+                <span class="text-xs bg-white/5 border border-white/10 rounded-full px-3 py-1 text-neutral-400">Auto-applied at checkout</span>
+                <span class="text-xs bg-white/5 border border-white/10 rounded-full px-3 py-1 text-neutral-400">Limited inventory</span>
+              </div>
+            </div>
           </div>
         </div>
-        <p class="text-center text-xs text-neutral-400 mt-6">Prizes drawn server-side. Your exact prize depends on your account history.</p>
+
+        <!-- Secondary perks grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-3xl mx-auto reveal">
+          <div v-for="perk in topPerks" :key="perk.label"
+            class="group relative rounded-2xl border border-white/8 bg-white/3 hover:border-campaign/40 hover:bg-campaign/5 transition-all duration-200 p-6">
+            <div class="absolute top-0 left-0 right-0 h-[2px] bg-campaign opacity-0 group-hover:opacity-100 transition-opacity duration-200 rounded-t-2xl" />
+            <div class="flex items-center gap-3 mb-3">
+              <div class="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0" :style="{ background: perk.color + '22' }">
+                <component :is="perk.icon" class="size-5" :style="{ color: perk.color }" />
+              </div>
+              <span class="text-[10px] font-bold uppercase tracking-widest rounded-full px-2 py-0.5 border" :style="{ color: perk.color, borderColor: perk.color + '55', background: perk.color + '18' }">{{ perk.tier }}</span>
+            </div>
+            <p class="font-clash text-lg font-semibold text-white leading-snug">{{ perk.label }}</p>
+            <p class="text-neutral-500 text-xs mt-1">{{ perk.sub }}</p>
+          </div>
+        </div>
+
+        <p class="text-center text-xs text-neutral-600 mt-10">Every egg is guaranteed to beat the public 20% floor. Your prize is drawn instantly when you crack.</p>
       </Container>
     </section>
 
     <!-- ─── PRIZES SECTION ─── -->
-    <section class="py-20 bg-white dark:bg-dark border-t border-neutral-100 dark:border-neutral-800">
+    <section class="py-20 bg-[#0B0B0B] border-t border-white/5">
       <Container>
         <div class="text-center max-w-2xl mx-auto mb-14 reveal">
           <div class="inline-flex items-center gap-2 bg-campaign/10 border border-campaign/30 rounded-full px-4 py-1.5 text-xs font-semibold tracking-widest uppercase text-campaign mb-5">
             <IconRosetteDiscount class="size-3.5" /> What's Inside the Eggs
           </div>
-          <h2 class="font-clash text-3xl md:text-4xl font-semibold text-neutral-900 dark:text-white mb-3">Every Egg Hides a Real Prize</h2>
-          <p class="text-neutral-500 dark:text-neutral-400 text-base">All prizes are live WooCommerce coupons — single-use, auto-applied at checkout. Rarer prizes have limited inventory, so crack yours while they last.</p>
+          <h2 class="font-clash text-3xl md:text-4xl font-semibold text-white mb-3">Every Egg Hides a Real Prize</h2>
+          <p class="text-neutral-400 text-base">All prizes are live coupons — single-use, auto-applied at checkout. Rarer prizes have limited inventory, so crack yours while they last.</p>
         </div>
 
         <!-- Tier legend -->
@@ -411,7 +448,7 @@
           <div
             v-for="p in allPrizes"
             :key="p.id"
-            class="group relative rounded-2xl border bg-white dark:bg-neutral-900 p-5 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg"
+            class="group relative rounded-2xl border bg-white/3 p-5 transition-all duration-200 hover:-translate-y-0.5 hover:border-campaign/40 hover:bg-campaign/5 hover:shadow-[0_4px_24px_rgba(234,179,8,0.08)]"
             :class="prizeListCardClass(p.tier)"
           >
             <!-- Tier badge + inventory -->
@@ -429,7 +466,7 @@
             </div>
 
             <!-- Prize name only — no prices -->
-            <p class="font-clash font-semibold text-base text-neutral-900 dark:text-white leading-snug">{{ p.name }}</p>
+            <p class="font-clash font-semibold text-base text-white leading-snug">{{ p.name }}</p>
           </div>
         </div>
 
@@ -446,6 +483,7 @@ import {
   IconCircleCheck, IconMail, IconShieldCheck,
   IconRosetteDiscount, IconRefresh, IconCreditCard, IconStarFilled, IconEgg,
   IconBrandWhatsapp, IconBrandX, IconBrandDiscord, IconCopy, IconCheck,
+  IconPercentage, IconArrowUpRight,
 } from '@tabler/icons-vue'
 
 definePageMeta({ layout: 'campaign' })
@@ -475,20 +513,28 @@ const tierLegend = [
   { label: 'Jackpot', color: TIER_COLORS[7] },
 ]
 
-// Deduplicated prize list (across all segments), sorted by tier ascending
+// Top perks for the "Win Up To" section (below jackpot)
+const topPerks = [
+  { label: 'Free $5K Account', sub: 'A full 2-Phase challenge on us', tier: 'Ultra Rare', color: '#a855f7', icon: IconStarFilled },
+  { label: '40% Off Entry Account', sub: '$5K or $10K 2-Phase only', tier: 'Uncommon', color: '#22c55e', icon: IconPercentage },
+  { label: 'Step Up to $25K for $104', sub: 'From $149 — save $45', tier: 'Uncommon', color: '#22c55e', icon: IconArrowUpRight },
+  { label: 'Step Up to $50K for $174', sub: 'From $249 — save $75', tier: 'Rare', color: '#f59e0b', icon: IconArrowUpRight },
+  { label: '30% Off Any Reset', sub: 'Restart your challenge cheaper', tier: 'Common+', color: '#3b82f6', icon: IconRefresh },
+  { label: '25% Off Any Account', sub: 'All sizes, both phases', tier: 'Common+', color: '#3b82f6', icon: IconRosetteDiscount },
+]
+
+// Deduplicated prize list for the full grid — rarest first, matches new prize pool
 const allPrizes = [
-  { id: 'jackpot',     name: '50% Off Any Account',            tier: 7, tier_label: 'Jackpot',    inventory: 15 },
-  { id: 'ultra-rare',  name: 'Free Challenge Account Retry',   tier: 6, tier_label: 'Ultra Rare', inventory: 10 },
-  { id: 'very-rare',   name: 'Free Challenge Account',         tier: 5, tier_label: 'Very Rare',  inventory: 25 },
-  { id: 'rare-2',      name: '$50 Account Credit',             tier: 4, tier_label: 'Rare',       inventory: 25 },
-  { id: 'rare-1',      name: '$37 Account Credit',             tier: 4, tier_label: 'Rare',       inventory: 20 },
-  { id: 'uncommon-4',  name: '40% Off Any Account',            tier: 3, tier_label: 'Uncommon',   inventory: 75 },
-  { id: 'uncommon-3',  name: '$25 Account Credit',             tier: 3, tier_label: 'Uncommon',   inventory: 40 },
-  { id: 'uncommon-2',  name: '$22 Account Credit',             tier: 3, tier_label: 'Uncommon',   inventory: 50 },
-  { id: 'uncommon-1',  name: '$16 Account Credit',             tier: 3, tier_label: 'Uncommon',   inventory: 40 },
-  { id: 'common-3',    name: 'Free Account Reset',             tier: 2, tier_label: 'Common+',    inventory: 30 },
-  { id: 'common-2',    name: '35% Off Any Account',            tier: 2, tier_label: 'Common+',    inventory: null },
-  { id: 'common-1',    name: '30% Off Any Account',            tier: 1, tier_label: 'Common',     inventory: null },
+  { id: 'jackpot',      name: '50% Off $5K or $10K 2-Phase',    tier: 7, tier_label: 'Jackpot',    inventory: 23 },
+  { id: 'free-5k',      name: 'Free $5K 2-Phase Account',        tier: 6, tier_label: 'Ultra Rare', inventory: 3  },
+  { id: 'upsell-100k',  name: 'Step Up to $100K for $349',       tier: 4, tier_label: 'Rare',       inventory: 15 },
+  { id: 'upsell-50k',   name: 'Step Up to $50K for $174',        tier: 4, tier_label: 'Rare',       inventory: 25 },
+  { id: 'upsell-25k',   name: 'Step Up to $25K for $104',        tier: 3, tier_label: 'Uncommon',   inventory: 90 },
+  { id: 'upsell-10k',   name: 'Step Up to $10K for $55',         tier: 3, tier_label: 'Uncommon',   inventory: 60 },
+  { id: '40pct-entry',  name: '40% Off $5K or $10K 2-Phase',     tier: 3, tier_label: 'Uncommon',   inventory: 70 },
+  { id: 'reset-30pct',  name: '30% Off Any Reset',               tier: 2, tier_label: 'Common+',    inventory: 80 },
+  { id: '25pct-all',    name: '25% Off Any Account',             tier: 2, tier_label: 'Common+',    inventory: null },
+  { id: 'reset-20pct',  name: '20% Off Any Reset',               tier: 1, tier_label: 'Common',     inventory: null },
 ]
 
 function tierStyle(tier: number) {
