@@ -32,6 +32,8 @@ export interface Prize {
   inventory: number | null
   segment: Segment | 'all'
   woo_description_suffix: string
+  // How long the coupon is valid after being issued. Defaults to 24h if omitted.
+  expires_hours?: number
   // For active segment: which last-purchase tier this prize targets
   // undefined = applies to all active users
   targets_last_purchase?: number[]
@@ -82,6 +84,7 @@ export const coldPool: Prize[] = [
     weight: 20,
     inventory: 80,
     segment: 'cold',
+    expires_hours: 168,
     woo_description_suffix: '20% off reset — cold',
   },
   {
@@ -95,6 +98,7 @@ export const coldPool: Prize[] = [
     weight: 12,
     inventory: 40,
     segment: 'cold',
+    expires_hours: 168,
     woo_description_suffix: '30% off reset — cold',
   },
   {
@@ -160,6 +164,7 @@ export const churnedPool: Prize[] = [
     weight: 25,
     inventory: 60,
     segment: 'churned',
+    expires_hours: 168,
     woo_description_suffix: '20% off reset — churned win-back',
   },
   {
@@ -186,6 +191,7 @@ export const churnedPool: Prize[] = [
     weight: 20,
     inventory: 40,
     segment: 'churned',
+    expires_hours: 168,
     woo_description_suffix: '30% off reset — churned win-back',
   },
   {
@@ -252,6 +258,7 @@ export const activePool: Prize[] = [
     weight: 20,
     inventory: 50,
     segment: 'active',
+    expires_hours: 168,
     woo_description_suffix: '20% off reset — active loyalty',
   },
   {
@@ -265,6 +272,7 @@ export const activePool: Prize[] = [
     weight: 15,
     inventory: 30,
     segment: 'active',
+    expires_hours: 168,
     woo_description_suffix: '30% off reset — active loyalty',
   },
 
@@ -387,7 +395,7 @@ export const TIER_CONFIG = {
 }
 
 // Campaign window — remove end date to run indefinitely, or set a date
-export const CAMPAIGN_START = new Date('2026-04-05T00:00:00Z')
+export const CAMPAIGN_START = new Date('2026-04-03T00:00:00Z')
 export const CAMPAIGN_END: Date | null = null  // null = no end date, runs until manually stopped
 
 export function isCampaignActive(): boolean {

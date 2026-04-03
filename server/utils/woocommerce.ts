@@ -30,7 +30,8 @@ export async function createWooCoupon(
     return { id: 0, code }
   }
 
-  const expiresAt = new Date(Date.now() + 24 * 60 * 60 * 1000).toISOString().slice(0, 19)
+  const expiryHours = prize.expires_hours ?? 24
+  const expiresAt = new Date(Date.now() + expiryHours * 60 * 60 * 1000).toISOString().slice(0, 19)
 
   const body: Record<string, any> = {
     action: 'create_coupon',

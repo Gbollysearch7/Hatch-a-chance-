@@ -54,21 +54,21 @@ export async function sendPrizeEmail({ email, prize, code, gdprConsent }: SendPr
 
       <!-- Hero -->
       <tr>
-        <td style="background-color:#4250eb;padding:40px 48px 44px;" class="mobile-pad">
+        <td style="background-color:#eab308;padding:40px 48px 44px;" class="mobile-pad">
           <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
             <tr>
               <td valign="middle">
                 <a href="https://tradersyard.com" target="_blank" style="text-decoration:none;">
-                  <img src="https://iili.io/fyq9H0X.png" alt="TradersYard" width="36" height="36" style="display:block;width:36px;height:36px;border:0;filter:brightness(0) invert(1);">
+                  <img src="https://iili.io/fyq9H0X.png" alt="TradersYard" width="36" height="36" style="display:block;width:36px;height:36px;border:0;">
                 </a>
               </td>
               <td align="right" valign="middle">
-                <span style="font-family:Verdana,Geneva,sans-serif;font-size:10px;font-weight:700;color:rgba(255,255,255,0.55);text-transform:uppercase;letter-spacing:3px;">Easter 2026</span>
+                <span style="font-family:Verdana,Geneva,sans-serif;font-size:10px;font-weight:700;color:rgba(0,0,0,0.45);text-transform:uppercase;letter-spacing:3px;">Easter 2026</span>
               </td>
             </tr>
           </table>
-          <h1 class="hero-hl" style="margin:36px 0 16px;font-family:Verdana,Geneva,sans-serif;font-size:34px;font-weight:700;color:#ffffff;line-height:1.2;letter-spacing:-0.5px;">Your egg is hatched,<br>${displayName}.</h1>
-          <p style="margin:0;font-family:Verdana,Geneva,sans-serif;font-size:15px;color:rgba(255,255,255,0.75);line-height:1.7;">You cracked your egg and won a real prize. Here's what's inside.</p>
+          <h1 class="hero-hl" style="margin:36px 0 16px;font-family:Verdana,Geneva,sans-serif;font-size:34px;font-weight:700;color:#000000;line-height:1.2;letter-spacing:-0.5px;">Your egg is hatched,<br>${displayName}.</h1>
+          <p style="margin:0;font-family:Verdana,Geneva,sans-serif;font-size:15px;color:rgba(0,0,0,0.65);line-height:1.7;">You cracked your egg and won a real prize. Here's what's inside.</p>
         </td>
       </tr>
 
@@ -95,7 +95,7 @@ export async function sendPrizeEmail({ email, prize, code, gdprConsent }: SendPr
                     </td>
                   </tr>
                 </table>
-                <p style="margin:12px 0 0;font-family:Verdana,Geneva,sans-serif;font-size:11px;color:#86868b;">This code expires in 24 hours &mdash; use it today.</p>
+                <p style="margin:12px 0 0;font-family:Verdana,Geneva,sans-serif;font-size:11px;color:#86868b;">${prize.expires_hours === 168 ? 'This code expires in 7 days.' : 'This code expires in 24 hours &mdash; use it today.'}</p>
               </td>
             </tr>
           </table>
@@ -176,8 +176,8 @@ export async function sendPrizeEmail({ email, prize, code, gdprConsent }: SendPr
           <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
             <tr>
               <td style="border-top:1px solid rgba(255,255,255,0.1);padding-top:20px;">
-                <p style="margin:0 0 12px;font-family:Verdana,Geneva,sans-serif;font-size:10px;color:rgba(255,255,255,0.3);line-height:1.7;"><strong style="color:rgba(255,255,255,0.45);">DISCLAIMER:</strong> Trading financial instruments, including simulated trading activities in a demo environment offered by <strong style="color:rgba(255,255,255,0.45);">TradersYard GmbH</strong>, involves a substantial risk of loss and is not suitable for all individuals. The valuation of financial instruments may be highly volatile. Participants may experience gains or losses greater than their initial demo trade order.</p>
-                <p style="margin:0 0 20px;font-family:Verdana,Geneva,sans-serif;font-size:10px;color:rgba(255,255,255,0.3);line-height:1.7;"><strong style="color:rgba(255,255,255,0.45);">TradersYard GmbH does not provide trading or investment advice.</strong> Any trading or investment decisions you make are solely your responsibility and at your own risk. Past performance is not indicative of future results.</p>
+                <p style="margin:0 0 12px;font-family:Verdana,Geneva,sans-serif;font-size:10px;color:rgba(255,255,255,0.3);line-height:1.7;"><strong style="color:rgba(255,255,255,0.45);">DISCLAIMER:</strong> Trading financial instruments, including simulated trading activities in a demo environment offered by <strong style="color:rgba(255,255,255,0.45);">TradersYard GmbH</strong>, involves a substantial risk of loss and is not suitable for all individuals. The valuation of financial instruments &mdash; including simulated valuations of foreign exchange contracts, futures, and options &mdash; can be highly volatile and may fluctuate significantly. As a result, participants may experience gains or losses greater than their initial demo trade order. Seasonal and geopolitical events may already be reflected in simulated market prices.</p>
+                <p style="margin:0 0 20px;font-family:Verdana,Geneva,sans-serif;font-size:10px;color:rgba(255,255,255,0.3);line-height:1.7;">Due to the leveraged nature of trading, even small price movements can have a significant impact on a demo trading account, potentially leading to substantial simulated losses or gains. <strong style="color:rgba(255,255,255,0.45);">TradersYard GmbH does not provide trading or investment advice.</strong> Any trading or investment decisions you make are solely your responsibility and at your own risk. Past performance is not indicative of future results.</p>
                 <p style="margin:0;font-family:Verdana,Geneva,sans-serif;font-size:10px;color:rgba(255,255,255,0.25);text-align:center;">&copy; 2026 TradersYard GmbH</p>
               </td>
             </tr>
@@ -255,21 +255,21 @@ export async function sendReferralCreditEmail(referrerEmail: string) {
 
       <!-- Hero -->
       <tr>
-        <td style="background-color:#4250eb;padding:40px 48px 44px;" class="mobile-pad">
+        <td style="background-color:#eab308;padding:40px 48px 44px;" class="mobile-pad">
           <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
             <tr>
               <td valign="middle">
                 <a href="https://tradersyard.com" target="_blank" style="text-decoration:none;">
-                  <img src="https://iili.io/fyq9H0X.png" alt="TradersYard" width="36" height="36" style="display:block;width:36px;height:36px;border:0;filter:brightness(0) invert(1);">
+                  <img src="https://iili.io/fyq9H0X.png" alt="TradersYard" width="36" height="36" style="display:block;width:36px;height:36px;border:0;">
                 </a>
               </td>
               <td align="right" valign="middle">
-                <span style="font-family:Verdana,Geneva,sans-serif;font-size:10px;font-weight:700;color:rgba(255,255,255,0.55);text-transform:uppercase;letter-spacing:3px;">Easter 2026</span>
+                <span style="font-family:Verdana,Geneva,sans-serif;font-size:10px;font-weight:700;color:rgba(0,0,0,0.45);text-transform:uppercase;letter-spacing:3px;">Easter 2026</span>
               </td>
             </tr>
           </table>
-          <h1 class="hero-hl" style="margin:36px 0 16px;font-family:Verdana,Geneva,sans-serif;font-size:34px;font-weight:700;color:#ffffff;line-height:1.2;letter-spacing:-0.5px;">Your friend cracked their egg,<br>${displayName}.</h1>
-          <p style="margin:0;font-family:Verdana,Geneva,sans-serif;font-size:15px;color:rgba(255,255,255,0.75);line-height:1.7;">That means you've earned a second crack — a completely fresh prize draw.</p>
+          <h1 class="hero-hl" style="margin:36px 0 16px;font-family:Verdana,Geneva,sans-serif;font-size:34px;font-weight:700;color:#000000;line-height:1.2;letter-spacing:-0.5px;">Your friend claimed their prize,<br>${displayName}.</h1>
+          <p style="margin:0;font-family:Verdana,Geneva,sans-serif;font-size:15px;color:rgba(0,0,0,0.65);line-height:1.7;">That unlocks your second crack &mdash; a completely fresh prize draw. Go get it.</p>
         </td>
       </tr>
 
@@ -283,7 +283,7 @@ export async function sendReferralCreditEmail(referrerEmail: string) {
       <!-- Body copy -->
       <tr>
         <td style="padding:20px 48px 0;" class="mobile-pad">
-          <p style="margin:0;font-family:Verdana,Geneva,sans-serif;font-size:15px;color:#1d1d1f;line-height:1.7;">Someone you referred just cracked their Easter egg. Head back to the page, enter your email, and crack another one &mdash; your second draw is waiting.</p>
+          <p style="margin:0;font-family:Verdana,Geneva,sans-serif;font-size:15px;color:#1d1d1f;line-height:1.7;">Someone you referred just claimed their Easter prize. That's the trigger &mdash; you've now unlocked a second crack. Head back, enter your email, and draw again. You can crack up to <strong>twice within 24 hours</strong> (your first crack + one referral bonus).</p>
         </td>
       </tr>
 
@@ -347,7 +347,8 @@ export async function sendReferralCreditEmail(referrerEmail: string) {
           <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
             <tr>
               <td style="border-top:1px solid rgba(255,255,255,0.1);padding-top:20px;">
-                <p style="margin:0 0 20px;font-family:Verdana,Geneva,sans-serif;font-size:10px;color:rgba(255,255,255,0.3);line-height:1.7;"><strong style="color:rgba(255,255,255,0.45);">TradersYard GmbH does not provide trading or investment advice.</strong> Any trading or investment decisions you make are solely your responsibility and at your own risk. Past performance is not indicative of future results.</p>
+                <p style="margin:0 0 12px;font-family:Verdana,Geneva,sans-serif;font-size:10px;color:rgba(255,255,255,0.3);line-height:1.7;"><strong style="color:rgba(255,255,255,0.45);">DISCLAIMER:</strong> Trading financial instruments, including simulated trading activities in a demo environment offered by <strong style="color:rgba(255,255,255,0.45);">TradersYard GmbH</strong>, involves a substantial risk of loss and is not suitable for all individuals. The valuation of financial instruments &mdash; including simulated valuations of foreign exchange contracts, futures, and options &mdash; can be highly volatile and may fluctuate significantly. As a result, participants may experience gains or losses greater than their initial demo trade order. Seasonal and geopolitical events may already be reflected in simulated market prices.</p>
+                <p style="margin:0 0 20px;font-family:Verdana,Geneva,sans-serif;font-size:10px;color:rgba(255,255,255,0.3);line-height:1.7;">Due to the leveraged nature of trading, even small price movements can have a significant impact on a demo trading account, potentially leading to substantial simulated losses or gains. <strong style="color:rgba(255,255,255,0.45);">TradersYard GmbH does not provide trading or investment advice.</strong> Any trading or investment decisions you make are solely your responsibility and at your own risk. Past performance is not indicative of future results.</p>
                 <p style="margin:0;font-family:Verdana,Geneva,sans-serif;font-size:10px;color:rgba(255,255,255,0.25);text-align:center;">&copy; 2026 TradersYard GmbH</p>
               </td>
             </tr>

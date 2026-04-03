@@ -224,7 +224,7 @@
                       <svg v-if="!codeCopied" class="w-4 h-4 opacity-40" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
                       <svg v-else class="w-4 h-4 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
                     </button>
-                    <p class="text-xs text-neutral-400 mt-2">Tap to copy · Expires in <span class="font-mono text-campaign font-semibold">{{ codeCountdown }}</span></p>
+                    <p class="text-xs text-neutral-400 mt-2">Tap to copy · {{ prize.expires_hours === 168 ? 'Expires in 7 days' : `Expires in ${codeCountdown}` }}</p>
                   </div>
 
                   <p class="text-xs text-neutral-500 dark:text-neutral-400">
@@ -254,7 +254,7 @@
                   <div class="mt-4 pt-4 border-t border-neutral-100 dark:border-neutral-800">
                     <p class="text-xs font-semibold text-neutral-500 dark:text-neutral-400 uppercase tracking-wider mb-1">Want another crack?</p>
                     <p class="text-xs text-neutral-400 mb-3 leading-relaxed">
-                      Send your link to a friend. When they crack their egg, you earn a free second crack — a completely new prize draw.
+                      Share your link. When a friend claims their prize through it, you unlock a second crack — a completely new draw. You can crack up to twice in 24 hours.
                     </p>
                     <!-- Referral link display -->
                     <div class="flex items-center gap-2 bg-neutral-50 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 rounded-xl px-3 py-2.5 mb-3">
@@ -440,6 +440,26 @@
       </Container>
     </section>
 
+    <!-- ─── FAQ ─── -->
+    <section class="py-20 bg-white border-t border-black/5">
+      <Container>
+        <div class="max-w-2xl mx-auto">
+          <div class="text-center mb-12">
+            <h2 class="font-clash text-3xl md:text-4xl font-semibold text-black">Frequently Asked Questions</h2>
+          </div>
+          <div class="space-y-0 divide-y divide-black/8">
+            <details v-for="faq in faqs" :key="faq.q" class="group py-5">
+              <summary class="flex items-center justify-between cursor-pointer list-none gap-4">
+                <span class="font-clash text-base font-semibold text-black group-open:text-campaign transition-colors">{{ faq.q }}</span>
+                <span class="flex-shrink-0 w-5 h-5 rounded-full border border-black/20 flex items-center justify-center text-neutral-500 group-open:border-campaign group-open:text-campaign group-open:rotate-45 transition-all text-lg leading-none">+</span>
+              </summary>
+              <p class="mt-3 text-sm text-neutral-600 leading-relaxed">{{ faq.a }}</p>
+            </details>
+          </div>
+        </div>
+      </Container>
+    </section>
+
   </div>
 </template>
 
@@ -484,6 +504,49 @@ const tierLegend = [
 // Top perks for the "Win Up To" section (below jackpot)
 const topPerks = [
   { label: 'Free $5K Account', sub: 'A full 2-Phase challenge on us', tier: 'Ultra Rare', color: '#a855f7', icon: IconStarFilled },
+]
+
+const faqs = [
+  {
+    q: 'Is this free to enter?',
+    a: 'Yes, completely free. Enter your email, crack your egg, and win a real prize. No purchase required to participate.',
+  },
+  {
+    q: 'How many times can I crack an egg?',
+    a: 'You get one crack per email address. If you refer a friend and they claim their prize, you unlock a second crack — bringing your maximum to two cracks within the 24-hour campaign window.',
+  },
+  {
+    q: 'When do I get my second crack?',
+    a: 'Your second crack is unlocked when someone you referred actually claims their prize (clicks "Redeem Now" in their email). You\'ll receive a notification email the moment that happens — head back to the page and crack again.',
+  },
+  {
+    q: 'How long do prize codes last?',
+    a: 'Most codes expire 24 hours after you crack your egg — so redeem quickly. Reset discount codes are an exception: they are valid for 7 days, giving you time to decide when to restart your challenge.',
+  },
+  {
+    q: 'What happens if I don\'t use my code in time?',
+    a: 'Expired codes cannot be reactivated. If you win a reset discount and need more time, use it within the 7-day window. All other prize codes must be redeemed within 24 hours.',
+  },
+  {
+    q: 'I recently failed a challenge — can I win a reset?',
+    a: 'Yes. Our system detects recent account activity and will weight your prize draw toward reset discounts if you\'ve recently failed a challenge. Reset codes give you 7 days to apply them so there\'s no pressure to decide immediately.',
+  },
+  {
+    q: 'Can I share my referral link before I crack?',
+    a: 'You receive your referral link after you crack your egg. Share it with friends — when they claim their prize through your link, you get a second draw.',
+  },
+  {
+    q: 'What prizes are available?',
+    a: 'Every egg wins something real — at minimum a 20% discount that beats our public deals. Prizes include challenge discounts (up to 50% off), reset discounts (20–30% off), step-up upsells to larger accounts at special prices, dollar credits, and more. A small number of eggs hide a completely free $5K account.',
+  },
+  {
+    q: 'Is the prize draw random?',
+    a: 'Prize selection is server-side randomised at the moment you crack. No two participants see the same pool, and prizes are drawn based on availability — rarer prizes have lower stock.',
+  },
+  {
+    q: 'Can I use multiple codes at once?',
+    a: 'Each code is single-use and individual-use only. If you crack twice, you\'ll receive two separate codes which must be used on separate orders.',
+  },
 ]
 
 // Deduplicated prize list for the full grid — rarest first, matches new prize pool
