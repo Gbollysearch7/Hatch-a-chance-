@@ -373,36 +373,42 @@
         </div>
 
         <!-- Top 3 hero prize cards -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-3xl mx-auto mb-6 reveal">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-5 max-w-4xl mx-auto mb-6 reveal">
           <!-- Jackpot -->
-          <div class="relative rounded-3xl overflow-hidden border border-campaign/40 bg-gradient-to-br from-campaign/10 via-campaign/5 to-transparent p-7 flex flex-col">
+          <div class="relative rounded-3xl overflow-hidden border border-campaign/40 bg-gradient-to-br from-campaign/12 via-campaign/6 to-transparent p-9 flex flex-col min-h-[220px]">
             <div class="absolute inset-0 pointer-events-none">
-              <div class="absolute top-0 left-1/2 -translate-x-1/2 w-48 h-24 bg-campaign/20 blur-[50px] rounded-full" />
+              <div class="absolute top-0 left-1/2 -translate-x-1/2 w-56 h-28 bg-campaign/20 blur-[60px] rounded-full" />
             </div>
-            <div class="inline-flex items-center gap-1.5 bg-campaign text-black text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-widest mb-4 self-start z-10">
-              <IconTrophy class="size-3" /> Jackpot
+            <div class="inline-flex items-center gap-1.5 bg-campaign text-black text-[10px] font-bold px-3 py-1.5 rounded-full uppercase tracking-widest mb-5 self-start z-10">
+              <IconTrophy class="size-3.5" /> Jackpot
             </div>
-            <div class="font-clash text-5xl font-semibold text-campaign leading-none mb-1 z-10">50%</div>
-            <div class="text-white font-clash text-base font-semibold z-10">Off Your Challenge</div>
-            <div class="text-neutral-400 text-xs mt-1 z-10">$5K or $10K 2-Phase · <strong class="text-campaign">$39.50</strong></div>
+            <div class="font-clash text-7xl font-semibold text-campaign leading-none mb-2 z-10">50%</div>
+            <div class="text-white font-clash text-lg font-semibold z-10">Off Your Challenge</div>
+            <div class="text-neutral-400 text-sm mt-2 z-10">$5K or $10K 2-Phase · <strong class="text-campaign">$39.50</strong></div>
           </div>
           <!-- Free Account -->
-          <div class="relative rounded-3xl overflow-hidden border border-purple-500/30 bg-gradient-to-br from-purple-500/10 via-purple-500/5 to-transparent p-7 flex flex-col">
-            <div class="inline-flex items-center gap-1.5 bg-purple-500/20 text-purple-300 border border-purple-500/30 text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-widest mb-4 self-start">
-              <IconStarFilled class="size-3" /> Ultra Rare
+          <div class="relative rounded-3xl overflow-hidden border border-purple-500/30 bg-gradient-to-br from-purple-500/12 via-purple-500/6 to-transparent p-9 flex flex-col min-h-[220px]">
+            <div class="absolute inset-0 pointer-events-none">
+              <div class="absolute top-0 left-1/2 -translate-x-1/2 w-56 h-28 bg-purple-500/15 blur-[60px] rounded-full" />
             </div>
-            <div class="font-clash text-5xl font-semibold text-purple-300 leading-none mb-1">Free</div>
-            <div class="text-white font-clash text-base font-semibold">$5K 2-Phase Account</div>
-            <div class="text-neutral-400 text-xs mt-1">A full challenge — on us</div>
+            <div class="inline-flex items-center gap-1.5 bg-purple-500/20 text-purple-300 border border-purple-500/30 text-[10px] font-bold px-3 py-1.5 rounded-full uppercase tracking-widest mb-5 self-start z-10">
+              <IconStarFilled class="size-3.5" /> Ultra Rare
+            </div>
+            <div class="font-clash text-7xl font-semibold text-purple-300 leading-none mb-2 z-10">Free</div>
+            <div class="text-white font-clash text-lg font-semibold z-10">$5K 2-Phase Account</div>
+            <div class="text-neutral-400 text-sm mt-2 z-10">A full challenge — completely on us</div>
           </div>
           <!-- Free Reset -->
-          <div class="relative rounded-3xl overflow-hidden border border-green-500/30 bg-gradient-to-br from-green-500/10 via-green-500/5 to-transparent p-7 flex flex-col">
-            <div class="inline-flex items-center gap-1.5 bg-green-500/20 text-green-300 border border-green-500/30 text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-widest mb-4 self-start">
-              <IconRefresh class="size-3" /> Uncommon
+          <div class="relative rounded-3xl overflow-hidden border border-green-500/30 bg-gradient-to-br from-green-500/12 via-green-500/6 to-transparent p-9 flex flex-col min-h-[220px]">
+            <div class="absolute inset-0 pointer-events-none">
+              <div class="absolute top-0 left-1/2 -translate-x-1/2 w-56 h-28 bg-green-500/12 blur-[60px] rounded-full" />
             </div>
-            <div class="font-clash text-5xl font-semibold text-green-300 leading-none mb-1">30%</div>
-            <div class="text-white font-clash text-base font-semibold">Off Any Reset</div>
-            <div class="text-neutral-400 text-xs mt-1">Restart your challenge for less</div>
+            <div class="inline-flex items-center gap-1.5 bg-green-500/20 text-green-300 border border-green-500/30 text-[10px] font-bold px-3 py-1.5 rounded-full uppercase tracking-widest mb-5 self-start z-10">
+              <IconRefresh class="size-3.5" /> Uncommon
+            </div>
+            <div class="font-clash text-7xl font-semibold text-green-300 leading-none mb-2 z-10">30%</div>
+            <div class="text-white font-clash text-lg font-semibold z-10">Off Any Reset</div>
+            <div class="text-neutral-400 text-sm mt-2 z-10">Restart your challenge for less</div>
           </div>
         </div>
 
