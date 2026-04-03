@@ -304,31 +304,31 @@
     </section>
 
     <!-- ─── REFERRAL CTA (persistent, visible to all) ─── -->
-    <section class="py-14 bg-[#0B0B0B] border-t border-white/5">
+    <section class="py-14 bg-white border-t border-black/5">
       <Container>
         <div class="max-w-2xl mx-auto text-center space-y-5">
-          <div class="inline-flex items-center gap-2 bg-campaign/10 border border-campaign/20 rounded-full px-4 py-1.5 text-xs font-semibold text-campaign uppercase tracking-wider">
+          <div class="inline-flex items-center gap-2 bg-campaign/10 border border-campaign/30 rounded-full px-4 py-1.5 text-xs font-semibold text-campaign uppercase tracking-wider">
             <IconEgg class="size-4" /> Earn a Second Crack
           </div>
-          <h2 class="font-clash text-2xl md:text-3xl font-semibold text-white">
+          <h2 class="font-clash text-2xl md:text-3xl font-semibold text-black">
             Share Your Link.<br/>
             <span class="text-campaign">They Win. You Win Again.</span>
           </h2>
-          <p class="text-neutral-400 text-sm leading-relaxed max-w-md mx-auto">
+          <p class="text-neutral-600 text-sm leading-relaxed max-w-md mx-auto">
             After cracking your egg, you get a unique referral link. Share it — when a friend cracks their egg through your link, you unlock a brand new second draw. A completely fresh prize, no strings.
           </p>
           <div class="grid grid-cols-3 gap-4 max-w-md mx-auto pt-2">
             <div class="text-center space-y-2">
               <div class="w-10 h-10 bg-campaign rounded-xl flex items-center justify-center mx-auto text-black font-clash font-bold">1</div>
-              <p class="text-xs text-neutral-400">Crack your egg — get your referral link</p>
+              <p class="text-xs text-neutral-500">Crack your egg — get your referral link</p>
             </div>
             <div class="text-center space-y-2">
               <div class="w-10 h-10 bg-campaign rounded-xl flex items-center justify-center mx-auto text-black font-clash font-bold">2</div>
-              <p class="text-xs text-neutral-400">Share it via WhatsApp, Discord, or X</p>
+              <p class="text-xs text-neutral-500">Share it via WhatsApp, Discord, or X</p>
             </div>
             <div class="text-center space-y-2">
               <div class="w-10 h-10 bg-campaign rounded-xl flex items-center justify-center mx-auto text-black font-clash font-bold">3</div>
-              <p class="text-xs text-neutral-400">Friend cracks → you get a second draw</p>
+              <p class="text-xs text-neutral-500">Friend cracks → you get a second draw</p>
             </div>
           </div>
           <a href="#crack" class="inline-block bg-campaign hover:bg-campaign-dark text-black font-clash font-semibold px-6 py-3 rounded-xl transition-colors text-sm mt-2">
@@ -339,18 +339,18 @@
     </section>
 
     <!-- ─── HOW IT WORKS ─── -->
-    <section class="py-16 bg-white border-y border-black/5">
+    <section class="py-16 bg-[#0B0B0B] border-y border-white/5">
       <Container>
         <div class="text-center mb-12">
-          <h2 class="font-clash text-3xl md:text-4xl font-semibold text-black">How It Works</h2>
+          <h2 class="font-clash text-3xl md:text-4xl font-semibold text-white">How It Works</h2>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-3xl mx-auto">
           <div v-for="step in steps" :key="step.num" class="text-center space-y-4">
             <div class="w-14 h-14 bg-campaign rounded-2xl flex items-center justify-center mx-auto shadow-[0_4px_24px_rgba(234,179,8,0.35)]">
               <span class="font-clash text-2xl font-bold text-black">{{ step.num }}</span>
             </div>
-            <h3 class="font-clash text-base font-semibold text-black">{{ step.title }}</h3>
-            <p class="text-sm text-neutral-600 leading-relaxed">{{ step.desc }}</p>
+            <h3 class="font-clash text-base font-semibold text-white">{{ step.title }}</h3>
+            <p class="text-sm text-neutral-500 leading-relaxed">{{ step.desc }}</p>
           </div>
         </div>
       </Container>
@@ -372,42 +372,51 @@
           </p>
         </div>
 
-        <!-- Top 3 hero prize cards -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-5 max-w-4xl mx-auto mb-6 reveal">
-          <!-- Jackpot -->
+        <!-- Hero prize cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5 max-w-2xl mx-auto mb-5 reveal">
+          <!-- 50% Off -->
           <div class="relative rounded-3xl overflow-hidden border border-campaign/40 bg-gradient-to-br from-campaign/12 via-campaign/6 to-transparent p-9 flex flex-col min-h-[220px]">
             <div class="absolute inset-0 pointer-events-none">
               <div class="absolute top-0 left-1/2 -translate-x-1/2 w-56 h-28 bg-campaign/20 blur-[60px] rounded-full" />
             </div>
-            <div class="inline-flex items-center gap-1.5 bg-campaign text-black text-[10px] font-bold px-3 py-1.5 rounded-full uppercase tracking-widest mb-5 self-start z-10">
-              <IconTrophy class="size-3.5" /> Jackpot
-            </div>
             <div class="font-clash text-7xl font-semibold text-campaign leading-none mb-2 z-10">50%</div>
             <div class="text-white font-clash text-lg font-semibold z-10">Off Your Challenge</div>
           </div>
-          <!-- Free Account -->
-          <div class="relative rounded-3xl overflow-hidden border border-purple-500/30 bg-gradient-to-br from-purple-500/12 via-purple-500/6 to-transparent p-9 flex flex-col min-h-[220px]">
-            <div class="absolute inset-0 pointer-events-none">
-              <div class="absolute top-0 left-1/2 -translate-x-1/2 w-56 h-28 bg-purple-500/15 blur-[60px] rounded-full" />
-            </div>
-            <div class="inline-flex items-center gap-1.5 bg-purple-500/20 text-purple-300 border border-purple-500/30 text-[10px] font-bold px-3 py-1.5 rounded-full uppercase tracking-widest mb-5 self-start z-10">
-              <IconStarFilled class="size-3.5" /> Ultra Rare
-            </div>
-            <div class="font-clash text-7xl font-semibold text-purple-300 leading-none mb-2 z-10">Free</div>
-            <div class="text-white font-clash text-lg font-semibold z-10">$5K 2-Phase Account</div>
-            <div class="text-neutral-400 text-sm mt-2 z-10">A full challenge — completely on us</div>
-          </div>
-          <!-- Free Reset -->
+          <!-- 30% Off Reset -->
           <div class="relative rounded-3xl overflow-hidden border border-green-500/30 bg-gradient-to-br from-green-500/12 via-green-500/6 to-transparent p-9 flex flex-col min-h-[220px]">
             <div class="absolute inset-0 pointer-events-none">
               <div class="absolute top-0 left-1/2 -translate-x-1/2 w-56 h-28 bg-green-500/12 blur-[60px] rounded-full" />
             </div>
-            <div class="inline-flex items-center gap-1.5 bg-green-500/20 text-green-300 border border-green-500/30 text-[10px] font-bold px-3 py-1.5 rounded-full uppercase tracking-widest mb-5 self-start z-10">
-              <IconRefresh class="size-3.5" /> Uncommon
-            </div>
             <div class="font-clash text-7xl font-semibold text-green-300 leading-none mb-2 z-10">30%</div>
             <div class="text-white font-clash text-lg font-semibold z-10">Off Any Reset</div>
-            <div class="text-neutral-400 text-sm mt-2 z-10">Restart your challenge for less</div>
+          </div>
+        </div>
+
+        <!-- "And a lot more" landscape banner -->
+        <div class="max-w-2xl mx-auto mb-6 reveal">
+          <div class="relative rounded-3xl overflow-hidden border border-white/10 bg-gradient-to-r from-white/5 via-white/3 to-white/5 px-10 py-8 flex items-center justify-between gap-6">
+            <div class="absolute inset-0 pointer-events-none">
+              <div class="absolute left-0 top-1/2 -translate-y-1/2 w-40 h-20 bg-campaign/8 blur-[50px] rounded-full" />
+              <div class="absolute right-0 top-1/2 -translate-y-1/2 w-40 h-20 bg-purple-500/8 blur-[50px] rounded-full" />
+            </div>
+            <div class="z-10">
+              <div class="font-clash text-2xl md:text-3xl font-semibold text-white leading-tight">
+                And 20+ more prizes
+              </div>
+              <p class="text-neutral-400 text-sm mt-1.5 leading-relaxed max-w-sm">
+                Including dollar credits, discount bundles, free resets, entry discounts across all account sizes — every egg wins something real.
+              </p>
+            </div>
+            <div class="flex-shrink-0 z-10 hidden sm:flex flex-col gap-2 items-end">
+              <div class="flex gap-2 flex-wrap justify-end">
+                <span class="text-xs font-semibold bg-white/8 border border-white/12 rounded-full px-3 py-1 text-neutral-300">💵 Dollar credits</span>
+                <span class="text-xs font-semibold bg-white/8 border border-white/12 rounded-full px-3 py-1 text-neutral-300">🔄 Free resets</span>
+              </div>
+              <div class="flex gap-2 flex-wrap justify-end">
+                <span class="text-xs font-semibold bg-white/8 border border-white/12 rounded-full px-3 py-1 text-neutral-300">🎯 Entry discounts</span>
+                <span class="text-xs font-semibold bg-white/8 border border-white/12 rounded-full px-3 py-1 text-neutral-300">📦 Bundles</span>
+              </div>
+            </div>
           </div>
         </div>
 
