@@ -34,7 +34,7 @@
           <!-- Chip badge -->
           <div class="inline-block">
             <div class="rounded-full text-center bg-campaign text-black px-4 py-1.5 text-[10px] font-semibold tracking-[3px] uppercase transition-transform duration-300 hover:scale-105">
-              Limited Time · One Egg Per Person
+              Easter Goodies Vault · Closes Without Notice
             </div>
           </div>
 
@@ -370,6 +370,7 @@
           <p class="text-neutral-400 max-w-lg mx-auto text-base">
             Every egg hides a real discount — auto-applied at checkout. The rarer your prize, the bigger your edge.
           </p>
+          <p class="text-neutral-600 text-xs max-w-md mx-auto mt-3">This vault can close at any time without announcement. If it's open, crack it now.</p>
         </div>
 
         <!-- Hero prize cards -->
@@ -436,7 +437,7 @@
           </div>
         </div>
 
-        <p class="text-center text-xs text-neutral-600 mt-10">Every egg beats the public 20% floor — your prize is drawn the moment you crack.</p>
+        <p class="text-center text-xs text-neutral-600 mt-10">Every egg beats the public 20% floor — your prize is drawn the moment you crack. This vault closes without notice.</p>
       </Container>
     </section>
 
@@ -507,6 +508,10 @@ const topPerks = [
 ]
 
 const faqs = [
+  {
+    q: 'How long is this available?',
+    a: 'This is an Easter goodies vault — it can close at any time without announcement. There is no countdown, no scheduled end date. If the vault is open when you arrive, crack your egg immediately. Once it closes, it\'s gone.',
+  },
   {
     q: 'Is this free to enter?',
     a: 'Yes, completely free. Enter your email, crack your egg, and win a real prize. No purchase required to participate.',
