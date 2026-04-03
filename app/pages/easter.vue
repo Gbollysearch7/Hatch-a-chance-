@@ -339,18 +339,18 @@
     </section>
 
     <!-- ─── HOW IT WORKS ─── -->
-    <section class="py-16 bg-[#0B0B0B] border-y border-white/5">
+    <section class="py-16 bg-white border-y border-black/5">
       <Container>
         <div class="text-center mb-12">
-          <h2 class="font-clash text-3xl md:text-4xl font-semibold text-white">How It Works</h2>
+          <h2 class="font-clash text-3xl md:text-4xl font-semibold text-black">How It Works</h2>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-3xl mx-auto">
           <div v-for="step in steps" :key="step.num" class="text-center space-y-4">
             <div class="w-14 h-14 bg-campaign rounded-2xl flex items-center justify-center mx-auto shadow-[0_4px_24px_rgba(234,179,8,0.35)]">
               <span class="font-clash text-2xl font-bold text-black">{{ step.num }}</span>
             </div>
-            <h3 class="font-clash text-base font-semibold text-white">{{ step.title }}</h3>
-            <p class="text-sm text-neutral-500 leading-relaxed">{{ step.desc }}</p>
+            <h3 class="font-clash text-base font-semibold text-black">{{ step.title }}</h3>
+            <p class="text-sm text-neutral-600 leading-relaxed">{{ step.desc }}</p>
           </div>
         </div>
       </Container>
@@ -384,7 +384,6 @@
             </div>
             <div class="font-clash text-7xl font-semibold text-campaign leading-none mb-2 z-10">50%</div>
             <div class="text-white font-clash text-lg font-semibold z-10">Off Your Challenge</div>
-            <div class="text-neutral-400 text-sm mt-2 z-10">$5K or $10K 2-Phase · <strong class="text-campaign">$39.50</strong></div>
           </div>
           <!-- Free Account -->
           <div class="relative rounded-3xl overflow-hidden border border-purple-500/30 bg-gradient-to-br from-purple-500/12 via-purple-500/6 to-transparent p-9 flex flex-col min-h-[220px]">
@@ -476,11 +475,6 @@ const tierLegend = [
 // Top perks for the "Win Up To" section (below jackpot)
 const topPerks = [
   { label: 'Free $5K Account', sub: 'A full 2-Phase challenge on us', tier: 'Ultra Rare', color: '#a855f7', icon: IconStarFilled },
-  { label: '40% Off Entry Account', sub: '$5K or $10K 2-Phase only', tier: 'Uncommon', color: '#22c55e', icon: IconPercentage },
-  { label: 'Step Up to $25K for $104', sub: 'From $149 — save $45', tier: 'Uncommon', color: '#22c55e', icon: IconArrowUpRight },
-  { label: 'Step Up to $50K for $174', sub: 'From $249 — save $75', tier: 'Rare', color: '#f59e0b', icon: IconArrowUpRight },
-  { label: '30% Off Any Reset', sub: 'Restart your challenge cheaper', tier: 'Common+', color: '#3b82f6', icon: IconRefresh },
-  { label: '25% Off Any Account', sub: 'All sizes, both phases', tier: 'Common+', color: '#3b82f6', icon: IconRosetteDiscount },
 ]
 
 // Deduplicated prize list for the full grid — rarest first, matches new prize pool
