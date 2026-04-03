@@ -207,7 +207,27 @@
                 </div>
 
                 <div class="px-8 py-8 text-center space-y-5">
-                  <div class="flex justify-center"><IconTrophy class="size-12 text-campaign" /></div>
+                  <!-- Cracked egg with prize popping out -->
+                <div class="flex justify-center">
+                  <svg viewBox="0 0 120 120" class="w-24 h-24 drop-shadow-[0_0_20px_rgba(234,179,8,0.5)]" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Egg shell bottom left -->
+                    <path d="M20 80 Q18 95 30 105 Q45 118 60 115 Q40 110 35 95 Z" fill="#eab308" opacity="0.9"/>
+                    <!-- Egg shell bottom right -->
+                    <path d="M100 80 Q102 95 90 105 Q75 118 60 115 Q80 110 85 95 Z" fill="#ca9a04" opacity="0.9"/>
+                    <!-- Crack line -->
+                    <path d="M38 78 L50 68 L44 58 L58 46 L52 36 L68 24" stroke="#1a1a1a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
+                    <!-- Sparkles -->
+                    <circle cx="25" cy="55" r="3" fill="#eab308" opacity="0.7"/>
+                    <circle cx="95" cy="50" r="2" fill="#eab308" opacity="0.6"/>
+                    <circle cx="30" cy="35" r="2" fill="#ffffff" opacity="0.5"/>
+                    <circle cx="88" cy="30" r="3" fill="#ffffff" opacity="0.4"/>
+                    <!-- Prize star burst -->
+                    <g transform="translate(60, 38)">
+                      <circle r="18" fill="#eab308"/>
+                      <path d="M0 -14 L3 -5 L12 -5 L5 1 L8 10 L0 5 L-8 10 L-5 1 L-12 -5 L-3 -5 Z" fill="#000" opacity="0.85"/>
+                    </g>
+                  </svg>
+                </div>
 
                   <h2 class="font-clash text-2xl md:text-3xl font-semibold text-neutral-900 dark:text-white leading-tight">
                     {{ prize.display_text }}
@@ -421,19 +441,14 @@
           </div>
         </div>
 
-        <!-- Secondary perks grid -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-3xl mx-auto reveal">
+        <!-- Prizes grid -->
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 max-w-4xl mx-auto reveal">
           <div v-for="perk in topPerks" :key="perk.label"
-            class="group relative rounded-2xl border border-white/8 bg-white/3 hover:border-campaign/40 hover:bg-campaign/5 transition-all duration-200 p-6">
+            class="group relative rounded-2xl border border-white/8 bg-white/3 hover:border-campaign/40 hover:bg-campaign/5 transition-all duration-200 p-4">
             <div class="absolute top-0 left-0 right-0 h-[2px] bg-campaign opacity-0 group-hover:opacity-100 transition-opacity duration-200 rounded-t-2xl" />
-            <div class="flex items-center gap-3 mb-3">
-              <div class="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0" :style="{ background: perk.color + '22' }">
-                <component :is="perk.icon" class="size-5" :style="{ color: perk.color }" />
-              </div>
-              <span class="text-[10px] font-bold uppercase tracking-widest rounded-full px-2 py-0.5 border" :style="{ color: perk.color, borderColor: perk.color + '55', background: perk.color + '18' }">{{ perk.tier }}</span>
-            </div>
-            <p class="font-clash text-lg font-semibold text-white leading-snug">{{ perk.label }}</p>
-            <p class="text-neutral-500 text-xs mt-1">{{ perk.sub }}</p>
+            <div class="text-2xl mb-2">{{ perk.icon }}</div>
+            <p class="font-clash text-sm font-semibold text-white leading-snug">{{ perk.label }}</p>
+            <p class="text-neutral-500 text-xs mt-1 leading-relaxed">{{ perk.sub }}</p>
           </div>
         </div>
 
@@ -504,7 +519,26 @@ const tierLegend = [
 
 // Top perks for the "Win Up To" section (below jackpot)
 const topPerks = [
-  { label: 'Free $5K Account', sub: 'A full 2-Phase challenge on us', tier: 'Ultra Rare', color: '#a855f7', icon: IconStarFilled },
+  { label: 'Free $5K 2-Phase Account', sub: 'A full challenge — completely on us', icon: '🥚' },
+  { label: '50% Off $5K Challenge', sub: 'Pay just $19.50 instead of $39', icon: '🎯' },
+  { label: '50% Off $10K Challenge', sub: 'Pay just $39.50 instead of $79', icon: '🎯' },
+  { label: '40% Off $5K Challenge', sub: 'Save $15.60 at checkout', icon: '💛' },
+  { label: '40% Off $10K Challenge', sub: 'Save $31.60 at checkout', icon: '💛' },
+  { label: '$25K Challenge for $104', sub: 'Save $45 off standard price', icon: '📈' },
+  { label: '$50K Challenge for $174', sub: 'Save $75 off standard price', icon: '📈' },
+  { label: '$100K Challenge for $349', sub: 'Save $150 off standard price', icon: '🚀' },
+  { label: '30% Off Any Reset', sub: '7-day window to use it', icon: '🔄' },
+  { label: '20% Off Any Reset', sub: '7-day window to use it', icon: '🔄' },
+  { label: '25% Off Any 2-Phase Account', sub: 'All sizes, both phases', icon: '💰' },
+  { label: '20% Off Any Account', sub: 'All sizes and challenge types', icon: '💰' },
+  { label: '$10 Account Credit', sub: 'Applied directly to your account', icon: '💵' },
+  { label: '$20 Account Credit', sub: 'Applied directly to your account', icon: '💵' },
+  { label: '$30 Account Credit', sub: 'Applied directly to your account', icon: '💵' },
+  { label: '$50 Account Credit', sub: 'Applied directly to your account', icon: '💵' },
+  { label: '1-Phase $5K for $34', sub: 'Faster path to funded — save $15', icon: '⚡' },
+  { label: '1-Phase $10K for $66', sub: 'Save $29 off standard price', icon: '⚡' },
+  { label: 'Free Reset Voucher', sub: 'One free restart, any account', icon: '🎁' },
+  { label: 'Futures $5K for $99', sub: 'Save $50 on Futures Static', icon: '📊' },
 ]
 
 const faqs = [
@@ -518,7 +552,7 @@ const faqs = [
   },
   {
     q: 'How many times can I crack an egg?',
-    a: 'You get one crack per email address. If you refer a friend and they claim their prize, you unlock a second crack — bringing your maximum to two cracks within the 24-hour campaign window.',
+    a: 'You get two cracks per 24-hour window per email address — your first crack when you enter, and a second crack when someone you referred claims their prize.',
   },
   {
     q: 'When do I get my second crack?',
@@ -533,16 +567,8 @@ const faqs = [
     a: 'Expired codes cannot be reactivated. If you win a reset discount and need more time, use it within the 7-day window. All other prize codes must be redeemed within 24 hours.',
   },
   {
-    q: 'I recently failed a challenge — can I win a reset?',
-    a: 'Yes. Our system detects recent account activity and will weight your prize draw toward reset discounts if you\'ve recently failed a challenge. Reset codes give you 7 days to apply them so there\'s no pressure to decide immediately.',
-  },
-  {
     q: 'Can I share my referral link before I crack?',
     a: 'You receive your referral link after you crack your egg. Share it with friends — when they claim their prize through your link, you get a second draw.',
-  },
-  {
-    q: 'What prizes are available?',
-    a: 'Every egg wins something real — at minimum a 20% discount that beats our public deals. Prizes include challenge discounts (up to 50% off), reset discounts (20–30% off), step-up upsells to larger accounts at special prices, dollar credits, and more. A small number of eggs hide a completely free $5K account.',
   },
   {
     q: 'Is the prize draw random?',
